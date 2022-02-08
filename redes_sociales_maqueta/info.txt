@@ -1,0 +1,2 @@
+Aquí se encontrará la maqueta en React + nodeJS con conexión a postgress
+para llevar a cabo la implementación de un red social básica

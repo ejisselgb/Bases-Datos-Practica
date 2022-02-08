@@ -1,0 +1,2 @@
+Aquí estará la maqueta desarrollada en React + nodejs con conexión a postgress,
+para llevar a cabo la consulta y renderización de información
