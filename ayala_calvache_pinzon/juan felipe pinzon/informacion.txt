@@ -1,0 +1,3 @@
+Nombre:		Juan Felipe
+Apellido: 	Pinzón Trejo
+Email:		jfpinzont@eafit.edu.co
