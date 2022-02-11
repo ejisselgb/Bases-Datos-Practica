@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Movies
+=======
+Movies
+>>>>>>> 6d14ba421ceed98f3b31eba2bcd6482232357a26
