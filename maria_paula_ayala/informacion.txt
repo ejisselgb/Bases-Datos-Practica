@@ -1,0 +1,3 @@
+nombres:	Maria Paula 
+apellido:	Ayala Lizarazo
+correo:		mpayalal@eafit.edu.co
