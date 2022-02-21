@@ -1,2 +1,12 @@
-Aquí estará la maqueta desarrollada en React + nodejs con conexión a postgress,
-para llevar a cabo la consulta y renderización de información
+Herramientas necesarias para la ejecución del proyecto
+
+NodeJS: https://nodejs.org/en/download/
+
+### Ejecutar proyecto de manera local
+
+- Instalar dependencies: run `npm install ` en la raíz del proyecto TemplateMovies
+- Obtener una API key desde [aquí](https://www.themoviedb.org/settings/api)
+- En el archivo .env ubicado en la raíz del proyecto agrega el api key generado: API_KEY=YOUR_API_KEY_HERE
+- Ejecutar el proyecto con el comando: `npm start `
+
+*Antes de llevar estos pasos a cabo debes tener instalado Node JS.*
