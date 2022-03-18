@@ -47,6 +47,7 @@ CREATE TABLE history (
 	last_viewed varchar(50),
 	visualization_date timestamp,
 	account_id varchar(20),
+	CONSTRAINT pk_history PRIMARY KEY(account_id,profile_id), 
 	CONSTRAINT fk_account
 		FOREIGN KEY(account_id)
 		REFERENCES accounts (account_id),
