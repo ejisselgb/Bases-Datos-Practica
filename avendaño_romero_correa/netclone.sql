@@ -140,4 +140,4 @@ CREATE TABLE relationship (
 	CONSTRAINT fk_subtitles
 		FOREIGN KEY(subtitles_id)
 		REFERENCES subtitles (subtitles_id)
-)
+);
