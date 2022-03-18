@@ -1,0 +1,4 @@
+Nombres: David 
+Apellido: Fonseca Lara
+Correo institucional: dfonsecal@eafit.edu.co
+Correo personal: dfonsecalara27@gmail.com
