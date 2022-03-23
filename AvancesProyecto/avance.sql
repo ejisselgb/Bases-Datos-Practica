@@ -69,6 +69,7 @@ VALUES(5687 , 'David', 'davinci@gmail.com' , '314896465' , 'China')
 INSERT INTO "USUARIO"
 VALUES(2345 , 'Tobbias', 'toby@gmail.com' , '3229344476' , 'México')
 
+
 INSERT INTO "PERFIL"
 VALUES(111, 789, 'Sarita', 'Premium', '???', 'Acción, Romance')
 INSERT INTO "PERFIL"
