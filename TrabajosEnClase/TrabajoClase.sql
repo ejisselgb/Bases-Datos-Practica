@@ -62,3 +62,12 @@ INSERT INTO "Grupo 4"."Peliculas" values(3,'Lobezno','Portada3.JPG',10,'5:35:27'
 INSERT INTO "Grupo 4"."Genero" values (01,'Comedia');
 INSERT INTO "Grupo 4"."Genero" values (02,'Accion');
 INSERT INTO "Grupo 4"."Genero" values (03,'Drama');
+
+CREATE TABLE IF NOT EXISTS "Grupo 4"."Feedback"(
+	id_feedback serial,
+	id_pelicula serial,
+	comentario varchar(256),
+	valoracion int2,
+	CONSTRAINT pk_feedback PRIMARY KEY(id_feedback),
+	CONSTRAINT fK_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula)
+	);
