@@ -23,7 +23,7 @@ CREATE TABLE "Grupo 4"."Genero"(
 	nombre_genero varchar(30)
 	);
 
-ALTER TABLE "Grupo4"."Usuario" 
+ALTER TABLE "Grupo 4"."Usuario" 
 	ADD	CONSTRAINT pk_usuario PRIMARY KEY(nombre_usuario), 
 	ADD CONSTRAINT telefono_correo_uq UNIQUE (telefono, correo),
 	ALTER COLUMN imagen SET NOT NULL,
@@ -34,8 +34,8 @@ ALTER TABLE "Grupo4"."Usuario"
 	ALTER COLUMN apellido SET NOT NULL,
 	ALTER COLUMN correo SET NOT NULL;
 	
-ALTER TABLE "Grupo 4"."Pelicula"
-	ADD CONSTRAINT pk_peliculas PRIMARY KEY(id_pelcula),
+ALTER TABLE "Grupo 4"."Peliculas"
+	ADD CONSTRAINT pk_peliculas PRIMARY KEY(id_pelicula),
 	ADD CONSTRAINT link_portada_uq UNIQUE (portada, link_pelicula),
 	ALTER COLUMN nombre_pelicula SET NOT NULL,
 	ALTER COLUMN portada SET NOT NULL,
