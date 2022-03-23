@@ -24,6 +24,61 @@ CREATE TABLE "Grupo 4"."Genero"(
 	nombre_genero varchar(30)
 	);
 
+CREATE TABLE IF NOT EXISTS "Grupo 4"."Feedback"(
+	id_feedback serial,
+	id_pelicula serial,
+	comentario varchar(256),
+	valoracion int2,
+	CONSTRAINT pk_feedback PRIMARY KEY(id_feedback),
+	CONSTRAINT fK_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula)
+	);
+
+
+CREATE TABLE "Grupo 4"."Peliculas_Vistas"(
+	nombre_usuario varchar(10),
+	id_pelicula serial,
+	tiempo_visto time NOT NULL,
+	CONSTRAINT fk_nombre_usuario FOREIGN KEY(nombre_usuario)REFERENCES "Grupo 4"."Usuario"(nombre_usuario),
+	CONSTRAINT fk_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula)
+);
+
+CREATE TABLE "Grupo 4"."Feedbacks_Enviados"(
+	nombre_usuario varchar(10),
+	id_feedback serial,
+	CONSTRAINT fk_nombre_usuario FOREIGN KEY(nombre_usuario)REFERENCES "Grupo 4"."Usuario"(nombre_usuario),
+	CONSTRAINT fk_id_feedback FOREIGN KEY(id_feedback)REFERENCES "Grupo 4"."Feedback"(id_feedback)
+);
+
+CREATE TABLE "Grupo 4"."Participantes"(
+	id_participante serial,
+	rol varchar(30) NOT NULL,
+	nombre varchar(30) NOT NULL,
+	apellido varchar(30) NOT NULL,
+	biografia varchar(500),
+	CONSTRAINT pk_participante PRIMARY KEY(id_participante)
+);
+
+CREATE TABLE "Grupo 4"."Peliculas_Participantes"(
+	id_pelicula serial,
+	id_participante serial,
+	CONSTRAINT fk_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula),
+	CONSTRAINT fk_id_participante FOREIGN KEY(id_participante)REFERENCES "Grupo 4"."Participantes"(id_participante)
+);
+
+CREATE TABLE "Grupo 4"."Catalogos"(
+	id_catalogo varchar(30),
+	nombre_catalogo varchar(30) NOT NULL UNIQUE,
+	descripcion varchar(30) NOT NULL,
+	CONSTRAINT pk_catalogo PRIMARY KEY (id_catalogo)
+);
+
+CREATE TABLE "Grupo 4"."Peliculas_Catalogos"(
+	id_pelicula serial,
+	id_catalogo varchar(30),
+	CONSTRAINT fk_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula),
+	CONSTRAINT fk_id_catalogo FOREIGN KEY(id_catalogo)REFERENCES "Grupo 4"."Catalogos"(id_catalogo)
+);
+
 ALTER TABLE "Grupo 4"."Usuario" 
 	ADD	CONSTRAINT pk_usuario PRIMARY KEY(nombre_usuario), 
 	ADD CONSTRAINT telefono_correo_uq UNIQUE (telefono, correo),
@@ -63,11 +118,3 @@ INSERT INTO "Grupo 4"."Genero" values (01,'Comedia');
 INSERT INTO "Grupo 4"."Genero" values (02,'Accion');
 INSERT INTO "Grupo 4"."Genero" values (03,'Drama');
 
-CREATE TABLE IF NOT EXISTS "Grupo 4"."Feedback"(
-	id_feedback serial,
-	id_pelicula serial,
-	comentario varchar(256),
-	valoracion int2,
-	CONSTRAINT pk_feedback PRIMARY KEY(id_feedback),
-	CONSTRAINT fK_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula)
-	);
