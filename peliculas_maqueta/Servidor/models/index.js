@@ -3,6 +3,12 @@ const connection = require('../config/connection')
 
 module.exports = {
 
+    async getAllUser() {
+        const querySelect = `SELECT * FROM "Grupo 3"."CUENTA";`
+        const result = await connection.query(querySelect)
+        return result
+    },
+
     async getUser(username, password) {
         const querySelect = `'${username}' and '${password}';`
         const result = await connection.query(querySelect)

@@ -1,0 +1,234 @@
+SET DATESTYLE TO 'European';
+ALTER TABLE "Grupo 3"."PELICULA" DROP COLUMN ano_estreno;
+ALTER TABLE "Grupo 3"."PELICULA" ADD COLUMN ano_estreno int NOT NULL;
+
+INSERT INTO "Grupo 3"."CUENTA" VALUES
+('mapita0121@gmail.com', 'hola123', '3206592746', '5063 0584 1225'),
+('jfpinzon@yahoo.com','q1w2e3','3116021379','8172 3849 7457'),
+('miguelc2002@hotmail.com','Mocca01','3104732841','4018 6253 0399'),
+('julslondo@gmail.com','RoMa02','3205723200','9751 5386 2918'),
+('nat.ovalle@hotmail.com','h0l44t0d05','3118920004','5757 3991 8589'),
+('gpsaznchez@gmail.com','F4r1111s','3204435098','1771 4692 6415'),
+('sebas_03@hotmail.com','g14nP4ul','3110423114','4262 5430 0070'),
+('camilagg@gmail.com','678ulaula','3103210974','3453 6288 5969'),
+('scastro2003@hotmail.com','90r7k2','3115632718','7029 8055 9221'),
+('roar2047@gmail.com','oqberkfoa90-','3165266948','8441 0409 5436');
+
+INSERT INTO "Grupo 3"."PELICULA" (titulo, duracion, sinopsis, ano_estreno, restriccion_edad, archivo_pelicula, archivo_trailer, cartel) VALUES
+('Chernobyl la pelicula',135,'Un bombero lucha por comenzar una nueva historia con su novia y su hijo, pero un accidente en la planta nuclear de Chernobyl lo cambia todo.',2021,13,'https://jeje','https://jeje','https://jeje'),
+('Emoji la pelicula',87,'En textópolis, donde se supone que los emojis solo deben mostrar una emoción, las diversas expresiones de Gene se vuelven un problema. Su solición, volverse normal.',2017,7,'https://jeje','https://jeje','https://jeje'),
+('Milagros del cielo',209,'Christy, una madre devota con una hija muy enferma, sufre una crsis de fe mientras intenta desesperadamente salvar a su pequeña y mantener unida a su familia',2016,13,'https://jeje','https://jeje','https://jeje'),
+('Spirit',83,'Un mustang salvaje capturado por oficiales de la caballeria de Eastods Unidos no ceja en su empeño por regresar a casa tras una serie de experiencias con los humanos',2002,7,'https://jeje','https://jeje','https://jeje'),
+('Rambo lll',101,'Rambo se niega a ayudar a Cnel. Trautman es una operación. Pero, cuando capturan a su amigo, rambo lanza una misión de rescate... él solo.',1988,16,'https://jeje','https://jeje','https://jeje'),
+('Tiburón',124,'Steven Spielberg invento la categoria "exito de verano" con esta historia sobre un insaciable tiburón blanco que aterroriza a los vecinos de Amity Island',1975,16,'https://jeje','https://jeje','https://jeje'),
+('La máscara',101,'Un desafortunado empleado bancario descubre una antigua mascar que lo convierte en un bromista desenfrenado y le premite dar rienda suelta a sus desoes más profundos',1994,13,'https://jeje','https://jeje','https://jeje'),
+('El hijo de Chucky',86,'Los malvados Chucky y Tiffany están de vuelta con ayuda de su hijo, quien los resucita y desata una nueva ola de asesinatos y caos.. esta vez en Hollywood',2004,16,'https://jeje','https://jeje','https://jeje'),
+('Ganar o morir',94,'Un profugo condenado injustamente ayuda a su viuda y a sus  dos niños después de enterarse de que una empresa inmobiliaria amenaza con quitarles sus tierras',1993,16,'https://jeje','https://jeje','https://jeje'),
+('Quieren volverme loco',94,'Para deslumbrar a una madre soltera, un audaz pretendiente se ofrece a llevar a sus hijos de viaje y se ve obligado a soportar sus desquiciantes y endiabladas travesuras',2005,13,'https://jeje','https://jeje','https://jeje');
+
+INSERT INTO "Grupo 3"."PERFIL" (correo, nombre, edad, foto, contraseña_perfil, fecha_de_nacimiento, restriccion_edad)VALUES
+('mapita0121@gmail.com','mapa',19,'https://jeje','d6fb51f5','21/1/2003',0),
+('mapita0121@gmail.com','mama',44,'https://jeje','f15416df','6/3/1978',0),
+('mapita0121@gmail.com','papa',41,'https://jeje','5gf44g56f','6/5/1980',0),
+('mapita0121@gmail.com','invitados',14,'https://jeje','fg54d56','29/2/2008',0),
+('nat.ovalle@hotmail.com','natty',18,'https://jeje','addbgh74f6','11/6/2003',0),
+('nat.ovalle@hotmail.com','juan',21,'https://jeje','y6h4f8d6','13/9/2000',8),
+('nat.ovalle@hotmail.com','niños',18,'https://jeje','00000','1/1/2004',7),
+('camilagg@gmail.com','cami',18,'https://jeje','b6fd4g8t','7/7/2003',0),
+('scastro2003@hotmail.com','castro',18,'https://jeje','b6fgt4b15','12/9/2003',15),
+('scastro2003@hotmail.com','familia',14,'https://jeje','esw1g7tt95','29/2/2008',0);
+
+INSERT INTO "Grupo 3"."PELICULA-FAVORITA" VALUES
+(1,10),
+(4,5),
+(1,2),
+(1,5),
+(1,1),
+(8,2),
+(9,6),
+(2,2),
+(8,1),
+(1,9);
+
+INSERT INTO "Grupo 3"."PELICULA-COMENTADA" (id_perfil, id_pelicula, comentario, fecha_comentario) VALUES
+(10,2,'ta güonita','1/1/2022'),
+(9,7,'Una obra de arte','2/1/2022'),
+(6,6,'me dio miedito','3/1/2022'),
+(7,4,'No me gustó :c','4/1/2022'),
+(5,10,'Profe ponganos 5','5/1/2022'),
+(1,9,'10/10','6/1/2022'),
+(8,8,'No me gusto el final','7/1/2022'),
+(9,8,'7u7','8/1/2022'),
+(3,4,'UwU','9/1/2022'),
+(7,7,'Gran final!','10/1/2022');
+
+INSERT INTO "Grupo 3"."PELICULA-GUSTADA" VALUES
+(2,7,'1/1/2022'),
+(10,6,'2/1/2022'),
+(7,10,'3/1/2022'),
+(3,10,'4/1/2022'),
+(2,2,'5/1/2022'),
+(5,5,'6/1/2022'),
+(8,2,'7/1/2022'),
+(10,2,'8/1/2022'),
+(8,5,'9/1/2022'),
+(2,3,'10/1/2022');
+
+INSERT INTO "Grupo 3"."PELICULA-VISTA" VALUES
+(5,10,32),
+(3,9,101),
+(9,2,56),
+(7,4,83),
+(4,1,120),
+(1,3,209),
+(6,2,5),
+(1,5,100),
+(7,2,10),
+(4,3,150);
+
+INSERT INTO "Grupo 3"."GENERO" (nombre) VALUES
+('infantil'),
+('drama'),
+('romance'),
+('fantasia'),
+('animación'),
+('aventura'),
+('guerra'),
+('acción'),
+('thriller'),
+('misterio');
+
+INSERT INTO "Grupo 3"."IDIOMA" (nombre) VALUES
+('español (españa)'),
+('inglés'),
+('francés'),
+('italiano'),
+('alemán'),
+('mandarín'),
+('japonés'),
+('turco'),
+('ruso'),
+('español (latino)');
+
+INSERT INTO "Grupo 3"."ELENCO" (nombre) VALUES
+('Daniela Kozlovsky'),
+('Oskana Akinshina'),
+('James Corden'),
+('Adam Sandler'),
+('Jennifer Gardner'),
+('Queen Latifah'),
+('Matt Damen'),
+('Daniel Studi'),
+('Sylvester Stallone'),
+('Marc de Jonge');
+
+INSERT INTO "Grupo 3"."PREMIO" (nombre) VALUES
+('Pelicula animada favorita'),
+('TCA - Mejor Película de Drama'),
+('Annie'),
+('Éxito de Taquilla'),
+('Bronze Wrangler'),
+('Genesis - Largometraje'),
+('Young Artist'),
+('Razzie: PeorActordelaDécada'),
+('Razzie 1989: Peor Actor'),
+('Oscar - Mejor banda sonora');
+
+INSERT INTO "Grupo 3"."DIRECTOR" (nombre) VALUES
+('Daniela Kozlovsky'),
+('Tony Leondis'),
+('Patricia Riggen'),
+('Kelly Asbury'),
+('Lorna Cook'),
+('Peter McDonald'),
+('Steven Spielberg'),
+('Chuck Russel'),
+('Don Manchini'),
+('Robert Harmon');
+
+INSERT INTO "Grupo 3"."SUBTITULO" (nombre) VALUES
+('español (españa)'),
+('inglés'),
+('francés'),
+('italiano'),
+('alemán'),
+('mandarín'),
+('japonés'),
+('turco'),
+('ruso'),
+('español (latino)');
+
+INSERT INTO "Grupo 3"."GENERO-PELICULA" (id_genero, id_pelicula) VALUES
+(11,2),
+(11,3),
+(12,1),
+(13,1),
+(13,2),
+(13,4),
+(14,1),
+(14,2),
+(14,5),
+(14,6);
+
+INSERT INTO "Grupo 3"."IDIOMA-PELICULA" (id_idioma, id_pelicula) VALUES
+(11,10),
+(11,2),
+(12,2),
+(12,10),
+(13,2),
+(13,10),
+(14,2),
+(14,10),
+(15,2),
+(15,10);
+
+INSERT INTO "Grupo 3"."SUBTITULO-PELICULA" (id_subtitulo, id_pelicula) VALUES
+(1,10),
+(1,2),
+(2,2),
+(2,10),
+(3,2),
+(3,10),
+(4,2),
+(4,10),
+(5,2),
+(5,10);
+
+INSERT INTO "Grupo 3"."ELENCO-PELICULA" (id_elenco, id_pelicula) VALUES
+(11,1),
+(11,2),
+(12,3),
+(12,4),
+(14,7),
+(14,8),
+(13,5),
+(13,6),
+(15,9),
+(15,10);
+
+INSERT INTO "Grupo 3"."PREMIO-PELICULA" (id_premio, id_pelicula) VALUES
+(2,1),
+(3,2),
+(4,3),
+(4,4),
+(4,5),
+(4,6),
+(4,7),
+(5,8),
+(5,9),
+(6,10);
+
+INSERT INTO "Grupo 3"."DIRECTOR-PELICULA" (id_director, id_pelicula) VALUES
+(1,1),
+(2,2),
+(3,3),
+(4,4),
+(4,5),
+(5,6),
+(6,7),
+(7,8),
+(8,9),
+(9,10);
+
+SELECT * FROM "Grupo 3"."DIRECTOR-PELICULA"
+

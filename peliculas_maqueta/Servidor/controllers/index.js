@@ -23,6 +23,15 @@ router.get('/api', function (req, res, next) {
     })
 })
 
+router.get('/api/allusers', function (req, res, next) {
+    moviesModel.getAllUser().then(user=>{
+        res.status(200).send(user.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting user')
+    })
+})
+
 router.post('/api/user', function (req, res, next) {
     const { username, password } = req.body
     moviesModel.getUser(username, password).then(user=>{
