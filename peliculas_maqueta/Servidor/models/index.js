@@ -4,9 +4,27 @@ const connection = require('../config/connection')
 
 module.exports = {
 
-    async getPelicula() {
+    async getPeliculas() {
         const querySelect = `SELECT * FROM "Grupo 3"."PELICULA";`
         const result = await connection.query(querySelect)
+        return result
+    },
+
+    async getPelicula(id) {
+        const querySelect = `SELECT * FROM "Grupo 3"."PELICULA" WHERE id_pelicula=${id};`
+        const result = await connection.query(querySelect)
+        return result
+    },
+
+    async getPelicula(id) {
+        const querySelect = `SELECT * FROM "Grupo 3"."PELICULA" WHERE id_pelicula=${id};`
+        const result = await connection.query(querySelect)
+        return result
+    },
+
+    async updatePeli(id_pelicula, descripcion){
+        const queryUpdate = `UPDATE "Grupo 3"."PELICULA" SET sinopsis='${descripcion}' WHERE id_pelicula='${id_pelicula}';`
+        const result = await connection.query(queryUpdate)
         return result
     },
 
