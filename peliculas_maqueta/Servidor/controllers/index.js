@@ -23,6 +23,27 @@ router.get('/api', function (req, res, next) {
     })
 })
 
+router.get('/api/getPelicula', function (req, res, next) {
+    moviesModel.getPelicula().then(content=>{
+        res.status(200).send(content.rows)
+    }).catch(err=> {
+        console.log(err)
+        return res.status(500).send('Error getting Movies')
+    })
+})
+
+router.get('/api/content/:id', function (req, res, next) {
+    const id = req.params.id
+
+    moviesModel.getPelicula(id).then(content=>{
+        res.status(200).send(content.rows)
+    }).catch(err=> {
+        console.log(err)
+        return res.status(500).send('Error getting Movies')
+    })
+})
+
+
 router.post('/api/user', function (req, res, next) {
     const { username, password } = req.body
     moviesModel.getUser(username, password).then(user=>{
@@ -50,6 +71,16 @@ router.post('/api/user/update', function (req, res, next) {
     }).catch(err => {
         console.log(err)
         return res.status(500).send('Error getting user')
+    })
+})
+
+router.post('/api/actualizarPeli', function (req, res, next) {
+    const { content_id, information } = req.body
+    moviesModel.updateUser(content_id, information).then(peli=>{
+        res.status(200).send(peli.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting content')
     })
 })
 
