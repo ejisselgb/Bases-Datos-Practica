@@ -1,4 +1,6 @@
-/** Rutas esperadas para este ejercicio practico:
+/**GENERACION DE ENDPOINTS 
+ * 
+ * Rutas esperadas para este ejercicio practico:
  * /api/login
  * /api/profile or /api/user
  * /api/profile/create or /api/user/create
@@ -20,6 +22,15 @@ router.get('/api', function (req, res, next) {
         success: 'true',
         message: 'Movies Eafit Api ',
         version: '1.0.0'
+    })
+})
+
+router.get('/api/getMovies', function (req, res, next) {
+    moviesModel.getPelicula().then(movie=>{
+        res.status(200).send(movie.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting user')
     })
 })
 

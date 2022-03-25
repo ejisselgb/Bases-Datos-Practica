@@ -1,7 +1,14 @@
+//consultas a base de datos 
 const connection = require('../config/connection')
 
 
 module.exports = {
+
+    async getPelicula() {
+        const querySelect = `SELECT * FROM "Grupo 3"."PELICULA";`
+        const result = await connection.query(querySelect)
+        return result
+    },
 
     async getAllUser() {
         const querySelect = `SELECT * FROM "Grupo 3"."CUENTA";`
