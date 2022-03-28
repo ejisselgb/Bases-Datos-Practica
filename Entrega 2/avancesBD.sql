@@ -51,7 +51,7 @@ CREATE TABLE "Grupo 1"."CALIFICACION" (
 
 
 --Inserts usuario //no se pone el serial del pk, al fk si// (id usuario PK, nombre, correo, telefono, pais)
-INSERT INTO "Grupo 1"."USUARIO"
+INSERT INTO "Grupo 1"."USUARIO" (nombre, correo, telefono, pais)
 VALUES
 ('Sara Castrillón', 'saritalabest@correo.com', '3206574895', 'Colombia'),
 ('María José González', 'majo_lamejor@correo.com', '3214589623', 'Colombia'),
@@ -61,7 +61,7 @@ VALUES
 ;
 
 --Inserts Peliculas (id pelicula PK, titulo, fecha lanzamiento, genero)
-INSERT INTO "Grupo 1"."PELICULAS"
+INSERT INTO "Grupo 1"."PELICULAS" (titulo, fecha_lanzamiento, genero)
 VALUES
 ('El hombre araña', '2002/05/31', 'Acción' ),
 ('La isla siniestra', '2010/03/5', 'Thriller'),
@@ -74,45 +74,46 @@ VALUES
 ;
 
 --Inserts Catalogo (id catalogo PK, id pelicula fk de peliculas, region)
-INSERT INTO "Grupo 1"."CATALOGO"
+INSERT INTO "Grupo 1"."CATALOGO" (region)
 VALUES
-('Colombia'),
-('México'),
-('Ecuador'),
-('Chile')
+(5, 'Colombia'),
+(3, 'México'),
+(2,'Ecuador'),
+(4, 'Chile'),
+(1 ,'Colombia')
 ;
 
 --Inserts Perfil (id perfiles PK, id catalogo fk de catalogo, nombre, tipo, avatar, preferencias)
-INSERT INTO "Grupo 1"."PERFIL"
+INSERT INTO "Grupo 1"."PERFIL" (id_catalogo, nombre, tipo, avatar, preferencias)
 VALUES
-('Saris1', 'Adulto', 'imagen1.jpg', 'Fantasía, Acción, Romance'),
-('Majotinieblas', 'Adulto', 'imagen2.jpg', 'Terror, Thriller, Crimen'),
-('Humbertico25', 'Niño', 'imagen3.jpg', 'Comedia, Musical, Fantasía'),
-('DavidI45', 'Adulto', 'imagen4.jpg', 'Thriller, Acción, Comedia'),
-('Valeg123', 'Niño', 'imagen5.jpg', 'Comedia, Acción')
+(5 ,'Saris1', 'Adulto', 'imagen1.jpg', 'Fantasía, Acción, Romance'),
+(1 ,'Majotinieblas', 'Adulto', 'imagen2.jpg', 'Terror, Thriller, Crimen'),
+(2, 'Humbertico25', 'Niño', 'imagen3.jpg', 'Comedia, Musical, Fantasía'),
+(7, 'DavidI45', 'Adulto', 'imagen4.jpg', 'Thriller, Acción, Comedia'),
+(8, 'Valeg123', 'Niño', 'imagen5.jpg', 'Comedia, Acción')
 ;
 
 --Inserts Cuenta (nombre usuario PK, id usuario fk de usuario, id perfiles fk de perfil, contraseña, membresía)
-INSERT INTO "Grupo 1"."CUENTA"
+INSERT INTO "Grupo 1"."CUENTA" (id_usuario, id_perfiles, nombre_usuario, contraseña, membresia)
 VALUES
-('tobbey45a7', 'Premium'),
-('majotin777', 'Full'),
-('gusGus1', 'Basic'),
-('idarrdav74', 'Basic'),
-('holaV74', 'Full')
+(1, 1, 'sarac15', 'tobbey45a7', 'Premium'),
+(2, 2, 'majot', 'majotin777', 'Full'),
+(3, 3, 'bertix4', 'gusGus1', 'Basic'),
+(4, 4, 'david75', 'idarrdav74', 'Basic'),
+(5, 5, 'valeG', 'holaV74', 'Full')
 ;
 
 --Inserts Calificación (id pelicula fk de peliculas PK, id perfiles fk de perfiles, likes, comentarios)
-INSERT INTO "Grupo 1"."CALIFICACION"
+INSERT INTO "Grupo 1"."CALIFICACION" (id_pelicula, id_perfiles, likes, comentarios)
 VALUES
-(45, 'Amo al hombre araña'),
-(105, 'Wow no me imaginaba ese final'),
-(35, 'Mi sobrina ama esta pelicula'),
-(15, 'Me dió mucho miedo la pelii'),
-(200, 'No me canso de verla nunca'),
-(56, 'jaja muy charra'),
-(10, 'Muy impactante omg'),
-(5, 'Casi no me gusto pero bueno!!!')
+(1, 1, 45, 'Amo al hombre araña'),
+(2, 4, 105, 'Wow no me imaginaba ese final'),
+(3, 5, 35, 'Mi sobrina ama esta pelicula'),
+(4, 2, 15, 'Me dió mucho miedo la pelii'),
+(5, 3, 200, 'No me canso de verla nunca'),
+(6, 3, 56, 'jaja muy charra'),
+(7, 2, 10, 'Muy impactante omg'),
+(8, 1, 5, 'Casi no me gusto pero bueno!!!')
 ;
 
 
