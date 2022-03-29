@@ -40,14 +40,14 @@ CREATE TABLE "Grupo 4"."Peliculas_Vistas"(
 	tiempo_visto time NOT NULL,
 	CONSTRAINT fk_nombre_usuario FOREIGN KEY(nombre_usuario)REFERENCES "Grupo 4"."Usuario"(nombre_usuario),
 	CONSTRAINT fk_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula)
-);
+	);
 
 CREATE TABLE "Grupo 4"."Feedbacks_Enviados"(
 	nombre_usuario varchar(10),
 	id_feedback serial,
 	CONSTRAINT fk_nombre_usuario FOREIGN KEY(nombre_usuario)REFERENCES "Grupo 4"."Usuario"(nombre_usuario),
 	CONSTRAINT fk_id_feedback FOREIGN KEY(id_feedback)REFERENCES "Grupo 4"."Feedback"(id_feedback)
-);
+	);
 
 CREATE TABLE "Grupo 4"."Participantes"(
 	id_participante serial,
@@ -56,28 +56,35 @@ CREATE TABLE "Grupo 4"."Participantes"(
 	apellido varchar(30) NOT NULL,
 	biografia varchar(500),
 	CONSTRAINT pk_participante PRIMARY KEY(id_participante)
-);
+	);
 
 CREATE TABLE "Grupo 4"."Peliculas_Participantes"(
 	id_pelicula serial,
 	id_participante serial,
 	CONSTRAINT fk_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula),
 	CONSTRAINT fk_id_participante FOREIGN KEY(id_participante)REFERENCES "Grupo 4"."Participantes"(id_participante)
-);
+	);
 
 CREATE TABLE "Grupo 4"."Catalogos"(
 	id_catalogo varchar(30),
 	nombre_catalogo varchar(30) NOT NULL UNIQUE,
 	descripcion varchar(50) NOT NULL,
 	CONSTRAINT pk_catalogo PRIMARY KEY (id_catalogo)
-);
+	);
 
 CREATE TABLE "Grupo 4"."Peliculas_Catalogos"(
 	id_pelicula serial,
 	id_catalogo varchar(30),
 	CONSTRAINT fk_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas"(id_pelicula),
 	CONSTRAINT fk_id_catalogo FOREIGN KEY(id_catalogo)REFERENCES "Grupo 4"."Catalogos"(id_catalogo)
-);
+	);
+
+CREATE TABLE IF NOT EXISTS "Grupo 4"."Peliculas_Genero"(
+	id_pelicula serial,
+	id_genero serial,
+	CONSTRAINT fk_id_pelicula FOREIGN KEY(id_pelicula)REFERENCES "Grupo 4"."Peliculas",
+	CONSTRAINT fk_id_genero FOREIGN KEY(id_genero)REFERENCES "Grupo 4"."Genero"
+	);
 
 ALTER TABLE "Grupo 4"."Usuario" 
 	ADD	CONSTRAINT pk_usuario PRIMARY KEY(nombre_usuario), 

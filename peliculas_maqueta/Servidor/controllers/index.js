@@ -43,24 +43,32 @@ router.post('/api/user/create', function (req, res, next) {
     })
 })
 
-router.post('/api/user/update', function (req, res, next) {
-    const { username, password } = req.body
-    moviesModel.updateUser(username, password).then(user=>{
-        res.status(200).send({message: 'update data user ' + username, rowCount: user.rowCount})
+router.get('/api/movie/:id', function (req, res, next) {
+    const id_pelicula = req.params.id
+    moviesModel.getMovieId(id_pelicula).then(movie=>{
+        res.status(200).send(movie.rows)
     }).catch(err => {
         console.log(err)
-        return res.status(500).send('Error getting user')
+        return res.status(500).send(`Error getting movie '${id_pelicula}'`)
     })
 })
 
-router.get('/api/movie/:id', function (req, res, next) {
-    const id = req.params.id
-
-    moviesModel.getMovieId(id).then(user=>{
-        res.status(200).send(user.rows)
+router.get('/api/getAllMovies', function (req, res, next) {
+    moviesModel.getAllMovies().then(movies=>{
+        res.status(200).send(movies.rows)
     }).catch(err => {
         console.log(err)
-        return res.status(500).send('Error getting user')
+        return res.status(500).send('Error getting movies')
+    })
+})
+
+router.post('/api/movie/update', function(req,res,next){
+    const {id_pelicula, portada} = req.body
+    moviesModel.uptadeMovie(id_pelicula, portada).then(movie=>{
+        res.status(200).send(movie.rows)
+    }).catch(err=>{
+        console.log(err)
+        return res.status(500).send(`Error updating movie '${req.params.id}'`)
     })
 })
 
