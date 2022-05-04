@@ -64,4 +64,13 @@ router.get('/api/movie/:id', function (req, res, next) {
     })
 })
 
+router.get('/api/listUsers', function (req, res, next) {
+    moviesModel.getpeliculas().then(movies=>{
+        res.status(200).send(movies.rows)
+    }).catch(err=> {
+        console.log(err)
+        return res.status(500).send('Error getting Movies')
+    })
+})
+
 module.exports = router
