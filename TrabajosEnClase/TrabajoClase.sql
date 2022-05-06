@@ -111,6 +111,10 @@ ALTER TABLE "Grupo 4"."Genero"
 	ADD CONSTRAINT nombre_genero_uq UNIQUE (nombre_genero),
 	ALTER COLUMN nombre_genero SET NOT NULL;
 
+ALTER TABLE "Grupo 4"."Peliculas_Catalogos" 
+	ADD id_genero SERIAL;
+	ADD CONSTRAINT fk_id_genero FOREIGN KEY (id_genero) REFERENCES "Grupo 4"."Genero"(id_genero);
+
 SET DATESTYLE TO "EUROPEAN";
 
 INSERT INTO "Grupo 4"."Usuario" VALUES ('Giansz','Imagen.JPG','3022205116',18,'Gian Paul','Sanchez','1q2w3e4r5t','Giansz@gmail.com');
