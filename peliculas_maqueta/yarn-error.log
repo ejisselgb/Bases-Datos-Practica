@@ -1,0 +1,40 @@
+Arguments: 
+  /usr/bin/node /usr/bin/yarn add xlsx
+
+PATH: 
+  /home/gleipnir/.local/bin:/home/gleipnir/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/home/gleipnir/.dotnet/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  18.1.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect ENETUNREACH 2606:4700::6810:1323:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1195:16)
+
+npm manifest: 
+  {
+    "name": "peliculas_maqueta",
+    "version": "1.0.0",
+    "description": "",
+    "main": "automateInsert.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "jquery-csv": "^1.0.21"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
