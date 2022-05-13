@@ -5,8 +5,8 @@ module.exports = {
         endpoint: 'http://localhost:3001'
     },
     aws_remote_config:{ // Se usa esta configuración en el momento que nos conectamos a la base dedatos en AWS de manera remota
-        accessKeyId: 'AKIA45CQWSXZ2PE4FCBV',
-        secretAccessKey: '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',
-        region: 'us-east-2',
+        accessKeyId: 'a',
+        secretAccessKey: 'b',
+        region: 'c',
     }
 }
