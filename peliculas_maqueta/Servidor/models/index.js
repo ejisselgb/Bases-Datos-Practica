@@ -83,6 +83,12 @@ module.exports = {
         return result
     },
 
+    async createPlan(id_plan, screens, price){
+        const queryUpdate = `INSERT INTO ${schema}."PLANS"(id_plan, screens, price)VALUES('${id_plan}', '${screens}', '${price}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
     async createSub(id_subscription, id_user, id_plan, payment_date, payment_method, active){
         const queryUpdate = `INSERT INTO ${schema}."SUBSCRIPTIONS"(id_subscription, id_user, id_plan, payment_date, payment_method, active)VALUES('${id_subscription}', '${id_user}', '${id_plan}', '${payment_date}', '${payment_method}', '${active}');`
         const result = await connection.query(queryUpdate)
@@ -121,6 +127,96 @@ module.exports = {
 
     async createCategorySerie(id_serie, id_category){
         const queryUpdate = `INSERT INTO ${schema}."SERIES_CATEGORIES"(id_serie, id_category)VALUES('${id_serie}', '${id_category}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createFavMovie(id_user, id_profile, id_movie){
+        const queryUpdate = `INSERT INTO ${schema}."FAVORITE_MOVIES"(id_user, id_profile, id_movie)VALUES('${id_user}', '${id_profile}, '${id_movie}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createFavSerie(id_user,id_profile, id_serie){
+        const queryUpdate = `INSERT INTO ${schema}."FAVORITE_SERIES"(id_user,id_profile, id_serie)VALUES('${id_user}', '${id_profile},'${id_serie}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createActor(id_actor, name, surname){
+        const queryUpdate = `INSERT INTO ${schema}."ACTORS"(id_actor, name, surname)VALUES('${id_actor}', '${name}', '${surname}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createActorMovie(id_actor, id_movie){
+        const queryUpdate = `INSERT INTO ${schema}."MOVIES_ACTORS"(id_actor, id_movie)VALUES('${id_actor}', '${id_movie}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createActorSerie(id_actor, id_serie){
+        const queryUpdate = `INSERT INTO ${schema}."SERIES_ACTORS"(id_actor, id_serie)VALUES('${id_actor}', '${id_serie}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createCountry(id_country, name, currency, time_zone){
+        const queryUpdate = `INSERT INTO ${schema}."COUNTRIES"(id_country, name, currency, time_zone)VALUES('${id_country}', '${name}', '${currency}', '${time_zone}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createZone(id_zone, id_country, name){
+        const queryUpdate = `INSERT INTO ${schema}."ZONES"(id_zone, id_country, name)VALUES('${id_zone}', '${id_country}', '${name}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createCity(id_city, id_zone, name){
+        const queryUpdate = `INSERT INTO ${schema}."CITIES"(id_city, id_zone, name)VALUES('${id_city}', '${id_zone}', '${name}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createLanguage(id_language, name){
+        const queryUpdate = `INSERT INTO ${schema}."LANGUAGES"(id_language, name)VALUES('${id_language}', '${name}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createLanguageSerie(id_serie, id_language){
+        const queryUpdate = `INSERT INTO ${schema}."SERIES_LANGUAGES"(id_serie, id_language)VALUES('${id_serie}', '${id_language}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createLanguageMovie(id_movie, id_language){
+        const queryUpdate = `INSERT INTO ${schema}."MOVIES_LANGUAGES"(id_movie, id_language)VALUES('${id_movie}', '${id_language}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createViewTSerie(id_user, id_profile, id_serie, chapter, season, time_){
+        const queryUpdate = `INSERT INTO ${schema}."VIEW_TIME_SERIES"(id_user, id_profile, id_serie, chapter, season, time_)VALUES('${id_user}', '${id_profile}', '${id_serie}', '${chapter}', '${season}', '${time_}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createViewTMovie(id_user, id_profile, id_movie, time_){
+        const queryUpdate = `INSERT INTO ${schema}."VIEW_TIME_MOVIES"(id_user, id_profile, id_movie, time_)VALUES('${id_user}', '${id_profile}', '${id_movie}', '${time_}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createMovieRating(id_movie, id_user, movie_rating){
+        const queryUpdate = `INSERT INTO ${schema}."MOVIES_RATING"(id_movie, id_user, movie_rating)VALUES('${id_movie}', '${id_user}', '${movie_rating}');`
+        const result = await connection.query(queryUpdate)
+        return result
+    },
+
+    async createSerieRating(id_serie, id_user, serie_rating){
+        const queryUpdate = `INSERT INTO ${schema}."SERIE_RATING"(id_serie, id_user, serie_rating)VALUES('${id_serie}', '${id_user}', '${serie_rating}');`
         const result = await connection.query(queryUpdate)
         return result
     },

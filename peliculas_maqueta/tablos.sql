@@ -63,8 +63,8 @@ CREATE TABLE "Grupo 6"."MOVIES" (
     title varchar(100),
 	synopsis varchar(500),
     director varchar(20) NOT NULL,
-	poster_url varchar(100), --no se si eso esta bueno
-    trailer_url varchar(100)
+	poster_url varchar(300), --no se si eso esta bueno
+    trailer_url varchar(300)
 );
 ALTER TABLE "Grupo 6"."MOVIES" ADD CONSTRAINT pk_movie PRIMARY KEY(id_movie);
 
@@ -76,8 +76,8 @@ CREATE TABLE "Grupo 6"."SERIES" (
     tittle varchar(20),
 	synopsis varchar(20),
     director varchar(20),
-	poster_url varchar(100), --no se si eso esta bueno
-    trailer_url varchar(100)
+	poster_url varchar(300), --no se si eso esta bueno
+    trailer_url varchar(300)
 );
 ALTER TABLE "Grupo 6"."SERIES" ADD CONSTRAINT pk_serie PRIMARY KEY(id_serie);
 
@@ -90,7 +90,7 @@ CREATE TABLE "Grupo 6"."CHAPTERS_SERIES"(
     number int,
     season int,
 	tittle varchar(100),
-	img_url varchar(100) --no se si eso esta bueno
+	img_url varchar(300) --no se si eso esta bueno
 
 );
 ALTER TABLE "Grupo 6"."CHAPTERS_SERIES" ADD CONSTRAINT pk_chapter PRIMARY KEY(id_chapter);
@@ -321,6 +321,7 @@ CREATE TABLE "Grupo 6"."SERIES_RATING" (
 
     id_series varchar(20) NOT NULL,
     id_user varchar(20),
+    serie_rating varchar(20)
 
 );
 ALTER TABLE "Grupo 6"."SERIES_RATING" ADD CONSTRAINT pk_series_rating PRIMARY KEY(id_serie, id_user);

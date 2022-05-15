@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery-csv": "^1.0.21"
+    "jquery-csv": "^1.0.21",
+    "node-csv": "^0.1.2"
   }
 }
