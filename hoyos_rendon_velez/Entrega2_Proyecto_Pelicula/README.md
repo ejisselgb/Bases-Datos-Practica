@@ -13,15 +13,15 @@ Este sirve para observar info general de los perfiles existentes en la base de d
 		
 ###### ejemplo:
 
-```
-Se envia email y contraseña
 
+Se envia email y contraseña
+```json
                {"email": "velez_pro12@hotmail.com",
                 "contrasena":"rayomcqueen01"}
 ```
 
 ###### Se obtiene la siguiente informacion
-```
+```json
            [ {"nombre_perfil": "McQueen",
         "foto_perfil": "fotofachera3.jpg",
         "edad": 21,
@@ -119,8 +119,8 @@ Se hace mediente parametros en el buscador
 ```
 ------------
 se obtiene:
-```
-json
+```json
+
     {
         "message": "update data user veronica127@gmail.com",
         "rowCount": 1
@@ -136,13 +136,13 @@ json
 		/api/user/suscripciones/renovar
 		
 	Para esto se requiere usar el e-mail y la contraseña para poder actualizar (renovar) la suscripcion
-```
+```json
 		{"email":"veronica@gmail.com",
 		"contrasena":"vero69001",
 		"nuevaFecha":"2022-05-17T05:00:00.000Z"}
 ```
 Saldrá
-```
+```json
 		 "message": "update fecha de facturacion de este usuario veronica@gmail.com"
 ```
 ------------
@@ -154,7 +154,7 @@ Saldrá
 Se envia el tipo, si es serie o película, luego se llenan los demás campos correspondientes
 - ####### Ejemplo:
 Para el caso en el que se requiera cambiar la info de una serie
-```
+```json
 
                 {"tipo": "serie",
                 "id":"1",
@@ -167,7 +167,7 @@ Para el caso en el que se requiera cambiar la info de una serie
                 "tiempo":""}
 ```
 Para el caso de película:
-```
+```json
 
                 {"tipo": "pelicula",
                 "id":"2",
@@ -203,12 +203,12 @@ Para el caso de película:
 		/api/promedio_suscripciones/Mes
 		
 ###### ejemplo:
-```
+```json
                    { "month": "10",
                     "year":"2023"}
 ```
 ###### Result postman
-```
+```json
     	{
         "promedio_suscripciones": 36500
    		 }
