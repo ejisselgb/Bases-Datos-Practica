@@ -22,7 +22,21 @@ router.get('/api', function (req, res, next) {
         version: '1.0.0'
     })
 })
-
+router.get('/api/getMovies', function (req, res, next) {
+    moviesModel.getPeliculas().then(movie=>{
+        res.status(200).send(movie.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting movies')
+    })
+})
+router.get('/api/myservice', function (req,res,next){
+    res.status(200).send({
+        success: 'true',
+        message: 'Movies Eafit Api ',
+        version: '1.0.0'
+    })
+})  
 router.post('/api/user', function (req, res, next) {
     const { username, password } = req.body
     moviesModel.getUser(username, password).then(user=>{
@@ -61,6 +75,36 @@ router.get('/api/movie/:id', function (req, res, next) {
     }).catch(err => {
         console.log(err)
         return res.status(500).send('Error getting user')
+    })
+})
+
+router.get('/api/getMovie/:id', function (req, res, next) {
+    const id = req.params.id
+
+    moviesModel.getPelicula(id).then(movie=>{
+        res.status(200).send(movie.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting movies by id')
+    })
+})
+
+router.post('/api/updateMovie', function (req, res, next) {
+    const {id_pelicula, nombre} = req.body
+    moviesModel.updatePelicula(id_pelicula,nombre).then(movie=>{
+        res.status(200).send(movie.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error updating movie name')
+    })
+})
+
+router.get('/api/listUsers', function (req, res, next) {
+    moviesModel.getListUser().then(movie=>{
+        res.status(200).send(movie.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting users')
     })
 })
 

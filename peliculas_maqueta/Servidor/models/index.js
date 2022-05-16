@@ -2,6 +2,25 @@ const connection = require('../config/connection')
 
 
 module.exports = {
+    
+
+    async getPelicula(id){
+        const querySelect = `SELECT * FROM "Grupo 5"."pelicula" WHERE id_pelicula = '${id}';`
+        const result = await connection.query(querySelect)
+        return result
+    },
+
+    async getPeliculas(){
+        const querySelect = 'SELECT * FROM "Grupo 5"."pelicula";'
+        const result = await connection.query(querySelect)
+        return result
+    },
+
+    async getListUser(){
+        const querySelect = 'SELECT * FROM "Grupo 5"."usuario";'
+        const result = await connection.query(querySelect)
+        return result
+    },
 
     async getUser(username, password) {
         const querySelect = `'${username}' and '${password}';`
@@ -12,6 +31,11 @@ module.exports = {
     async insertUser(username, password){
         const queryInsert = `'${username}' and '${password}';`
         const result = await connection.query(queryInsert)
+        return result
+    },
+    async updatePelicula(id_pelicula, nombre){
+        const querySelect = `UPDATE "Grupo 5"."pelicula" SET nombre_pelicula = '${nombre}' WHERE id_pelicula = '${id_pelicula}';`
+        const result = await connection.query(querySelect)
         return result
     },
 
