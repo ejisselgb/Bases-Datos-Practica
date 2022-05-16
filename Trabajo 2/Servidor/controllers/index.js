@@ -85,7 +85,6 @@ router.post('/api/user/update', function (req, res, next) {
 
 router.post('/api/actualizarPeli', function (req, res, next) {
     const { content_id, information } = req.body
-    4
     moviesModel.updateContent(content_id, information).then(content=>{
         res.status(200).send(content.rows)
     }).catch(err => {
@@ -105,8 +104,8 @@ router.get('/api/movie/:id', function (req, res, next) {
     })
 })
 
-router.get('/api/:username/:password', function (req, res, next) {
-    const username = req.params.id
+router.get('/api/loginUser/:username/:password', function (req, res, next) {
+    const username = req.params.username
     const password = req.params.password
 
     moviesModel.getUserByPasswrd(username, password).then(user=>{
