@@ -34,21 +34,27 @@ module.exports = {
         return result
     },
 
+
+
+
+    //users sql
     async getUser(nombre_usuario, contrasena) {
-        const querySelect = `SELECT * FROM "Grupo 4"."Usuario" WHERE nombre_usuario='${nombre_usuario}' AND contrasena='${contrasena}';`
+        const querySelect = `SELECT * FROM "Grupo 4 - T2"."USUARIOS" WHERE nombre_usuario='${nombre_usuario}' AND contrasena='${contrasena}';`
         const result = await connection.query(querySelect)
-        console.log(result.rows, "xd")
+        //console.log(result.rows, "xd")
         return result
     },
 
     async getAllUsers(){
-        const querySelect = `SELECT * FROM "Grupo 4"."Usuario";`
+        const querySelect = `SELECT * FROM "Grupo 4 - T2"."USUARIOS";`
         const result = await connection.query(querySelect)
+        console.log(result)
         return result
     },
 
-    async insertUser(nombre_usuario,imagen, telefono, edad, nombre, apellido,contrasena,correo){
-        const queryInsert = `INSERT INTO "Grupo 4"."Usuario" VALUES('${nombre_usuario}', '${imagen}', '${telefono}', '${edad}', '${nombre}', '${apellido}', '${contrasena}', '${correo}');`
+
+    async insertUser(nombre_usuario, telefono, contrasena, correo, info_tarjeta){
+        const queryInsert = `INSERT INTO "Grupo 4 - T2"."USUARIOS"(nombre_usuario,telefono,contrasena,correo,info_tarjeta) VALUES ('${nombre_usuario}',${telefono},'${contrasena}','${correo}','${info_tarjeta}');`              
         const result = await connection.query(queryInsert)
         return result
     },
@@ -65,3 +71,6 @@ module.exports = {
         return result
     }   
 }
+
+
+
