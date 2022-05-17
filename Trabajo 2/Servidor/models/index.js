@@ -74,7 +74,7 @@ module.exports = {
     /////////////////////////////////////////////////
     //First query
     async getUserByPasswrd(user, password) {
-        const querySelect = `SELECT * FROM "${schema}"."USERS" WHERE username=${user} AND password=${password};`
+        const querySelect = `SELECT * FROM "${schema}"."USERS" WHERE username='${user}' AND password='${password}';`
         const result = await connection.query(querySelect)
         return result
     },
@@ -83,7 +83,7 @@ module.exports = {
     //Second query
     //Movies
     async getMovieByCategory(category) {
-        const querySelect = `SELECT mv.title,mv.poster_url,ca.name_category FROM "${schema}"."MOVIES_CATEGORIES" as mc INNER JOIN "${schema}"."CATEGORIES" as ca ON mc.id_category = ca.id_category INNER JOIN "${schema}"."MOVIES" as mv ON mc.id_movie = mv.id_movie WHERE ca.name_category = '${category}';`
+const querySelect = `SELECT mv.title,mv.poster_url,ca.name_category FROM "${schema}"."MOVIES_CATEGORIES" as mc INNER JOIN "${schema}"."CATEGORIES" as ca ON mc.id_category = ca.id_category INNER JOIN "${schema}"."MOVIES" as mv ON mc.id_movie = mv.id_movie WHERE ca.name_category = '${category}';`
         const result = await connection.query(querySelect)
         return result
     },
@@ -97,7 +97,7 @@ module.exports = {
 
     /////////////////////////////////////////////////
     /////////////////////////////////////////////////
-    //Third Query
+    //Third Query (not working endpoint)
     async getMovieBySearch(input) {
         const querySelect = `SELECT * FROM "${schema}"."MOVIES" as mo WHERE mo.title ILIKE '%${input}%';`
         const result = await connection.query(querySelect)
@@ -118,7 +118,7 @@ module.exports = {
     /////////////////////////////////////////////////
     //Fifth Query
     async getSerieById(id) {
-        const querySelect = `SELECT * FROM "${schema}"."SERIES" WHERE id_serie = '${input}';`
+        const querySelect = `SELECT * FROM "${schema}"."SERIES" WHERE id_serie = '${id}';`
         const result = await connection.query(querySelect)
         return result
     },
@@ -131,6 +131,8 @@ module.exports = {
         const result = await connection.query(querySelect)
         return result
     },
+
+    //-----------------------------------------------------------------------------------------------------------------------------------------
     /////////////////////////////////////////////////
     /////////////////////////////////////////////////
     //Seventh Query
@@ -231,7 +233,7 @@ module.exports = {
     /////////////////////////////////////////////////
     //Tenth Query
     async getAveragePrice() {
-        const querySelect = `SELECT AVG(ALL price) FROM (SELECT sb.id_plan, price FROM "${schema}"."SUBSCRIPTIONS" AS sb INNER JOIN "${schema}"."PLANS" AS pl ON sb.id_plan = pl.id_plan WHERE active = true) as average; ';`
+        const querySelect = `SELECT AVG(ALL price) FROM (SELECT sb.id_plan, price FROM "${schema}"."SUBSCRIPTIONS" AS sb INNER JOIN "${schema}"."PLANS" AS pl ON sb.id_plan = pl.id_plan WHERE active = true) as average;`
         const result = await connection.query(querySelect)
         return result
     },
