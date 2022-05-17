@@ -92,12 +92,12 @@ Se hace mediente parametros en el buscador
 
 		/api/serie_capitulo/:id
 ###### Ids y series:
-- ID: 1,    Pelicula: Palpito.
-- ID: 2,   Pelicula: Gambito de dama.
-- ID: 3,    Pelicula: Kakegurui.
-- ID: 4,   Pelicula: You.
-- ID: 5,   Pelicula: Viva el Rey Julien.
-- ID: 6,   Pelicula: Cuerpo Humano.
+- ID: 1,    Serie: Palpito.
+- ID: 2,   Serie: Gambito de dama.
+- ID: 3,    Serie: Kakegurui.
+- ID: 4,   Serie: You.
+- ID: 5,   Serie: Viva el Rey Julien.
+- ID: 6,   Serie: Cuerpo Humano.
 
 ------------
 - ##### Traer la información de las películas favoritas de un usuario (nombre película, poster)
