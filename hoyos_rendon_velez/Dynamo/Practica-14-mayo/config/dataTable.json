@@ -1,0 +1,21 @@
+{
+    "TableName": "Pelicula_favorita_cvj",
+    "KeySchema": [
+        {
+    "AttributeName": "id_usuario",
+    "KeyType": "HASH"
+        }
+    ],
+    "AttributeDefinitions": [
+    {
+    "AttributeName": "id_usuario",
+    "AttributeType": "S"
+    }
+    ],
+    "ProvisionedThroughput": {
+    "ReadCapacityUnits":1,
+    "WriteCapacityUnits":1
+    }
+}
+
+
