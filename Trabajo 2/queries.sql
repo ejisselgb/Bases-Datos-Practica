@@ -121,9 +121,10 @@ UPDATE "Grupo 6 - T2"."SERIES" SET poster_url = [input] WHERE poster_url = [inpu
 --Obtener el valor promedio que se debe pagar al mes según las suscripciones de los 
 --usuarios a los planes que ofrece la plataforma
 SELECT AVG(ALL price) FROM 
-(SELECT sb.id_plan, price FROM "Grupo 6 - T2"."SUBSCRIPTIONS" AS sb
-    INNER JOIN 
-"Grupo 6 - T2"."PLANS" AS pl ON sb.id_plan = pl.id_plan    WHERE active = true) as average;
+	(SELECT sb.id_plan, price FROM "Grupo 6 - T2"."SUBSCRIPTIONS" AS sb
+		INNER JOIN 
+	"Grupo 6 - T2"."PLANS" AS pl ON sb.id_plan = pl.id_plan 
+	 WHERE active = true AND payment_date BETWEEN '2022-05-01' AND '2022-05-03') as average;
 
 --ONCEAVA CONSULTA-----------------------------------------------
 --Obtener la cantidad de peliculas y series que 

@@ -105,7 +105,7 @@ router.get('/api/movie/:id', function (req, res, next) {
 })
 
 
-//DESDE ACA
+//Get user by password
 router.get('/api/loginUser/:username/:password', function (req, res, next) {
     const username = req.params.username
     const password = req.params.password

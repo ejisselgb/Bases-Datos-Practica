@@ -233,7 +233,7 @@ const querySelect = `SELECT mv.title,mv.poster_url,ca.name_category FROM "${sche
     /////////////////////////////////////////////////
     //Tenth Query
     async getAveragePrice() {
-        const querySelect = `SELECT AVG(ALL price) FROM (SELECT sb.id_plan, price FROM "${schema}"."SUBSCRIPTIONS" AS sb INNER JOIN "${schema}"."PLANS" AS pl ON sb.id_plan = pl.id_plan WHERE active = true) as average;`
+        const querySelect = `SELECT AVG(ALL price) FROM (SELECT sb.id_plan, price FROM "Grupo 6 - T2"."SUBSCRIPTIONS" AS sb INNER JOIN "Grupo 6 - T2"."PLANS" AS pl ON sb.id_plan = pl.id_plan WHERE active = true AND payment_date BETWEEN '2022-05-01' AND '2022-05-03') as average;`
         const result = await connection.query(querySelect)
         return result
     },
