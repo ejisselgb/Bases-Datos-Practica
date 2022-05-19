@@ -1,5 +1,5 @@
 module.exports = {
-    table_course: 'peliculas_favoritas',
+    table_course: 'CATEGORIAS_SERIES',
     aws_local_config: { //Se usa esta configuración ya que tenemos nuestra base de datos de maneralocal
         region: 'local',
         endpoint: 'http://localhost:3001'

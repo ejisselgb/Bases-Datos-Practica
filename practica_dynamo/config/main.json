@@ -1,14 +1,14 @@
 {
-    "TableName":"peliculas_favoritas",
+    "TableName":"CATEGORIAS_SERIES",
     "KeySchema":[
         {
-            "AttributeName": "id",
+            "AttributeName": "id_categorias_series",
             "KeyType": "HASH"
         }
     ],
     "AttributeDefinitions":[
         {
-            "AttributeName": "id",
+            "AttributeName": "id_categorias_series",
             "AttributeType": "S"
         }
     ],
