@@ -16,6 +16,8 @@ const express = require('express')
 const router = express.Router()
 const moviesModel = require('../models')
 
+//consulta prueba
+
 router.get('/api', function (req, res, next) {
     res.status(200).send({
         success: 'true',
@@ -24,18 +26,27 @@ router.get('/api', function (req, res, next) {
     })
 })
 
-router.post('/api/user', function (req, res, next) {
+//consultas Usuarios
+
+//consulta login
+router.get('/login/user', function (req, res, next) {
     const { nombre_usuario, contrasena } = req.body
     moviesModel.getUser(nombre_usuario, contrasena).then(user=>{
-        res.status(200).send(user.rows)
+       // console.log(user)
+        if(user.rows.length != 0){
+            res.status(200).send(user.rows)
+        }else{
+            res.status(404).send({"mensaje":"usuario no encontrado o contraseña incorrecta"})
+        }
     }).catch(err => {
         console.log(err)
-        return res.status(500).send('Error getting user '+nombre_usuario)
+        return res.status(500).send('Error getting user '+ nombre_usuario)
     })
 })
 
-router.get('/api/allUsers', function (req, res, next) {
-    moviesModel.getAllUsers().then(users=>{
+//Traer todos los usuarios
+router.get('/allUsers', async function (req, res, next) {
+    moviesModel.getAllUsers().then( users => {
         res.status(200).send(users.rows)
     }).catch(err => {
         console.log(err)
@@ -43,10 +54,16 @@ router.get('/api/allUsers', function (req, res, next) {
     })
 })
 
-router.post('/api/user/create', function (req, res, next) {
-    const { nombre_usuario,imagen, telefono, edad, nombre, apellido,contrasena,correo } = req.body
-    moviesModel.insertUser(nombre_usuario,imagen,telefono, edad, nombre, apellido,contrasena,correo).then(user=>{
-        res.status(200).send({message: 'create user '+nombre_usuario, rowCount: user.rowCount})
+
+router.post('/user/create', function (req, res, next) {
+    const { nombre_usuario,
+            telefono, 
+            contrasena,
+            correo,
+            info_tarjeta } = req.body
+
+    moviesModel.insertUser(nombre_usuario,telefono, contrasena, correo, info_tarjeta).then(user=>{
+    res.status(200).send({message: 'create user ' + nombre_usuario, rowCount: user.rowCount})
     }).catch(err => {
         console.log(err)
         return res.status(500).send('Error creating user')
@@ -56,7 +73,7 @@ router.post('/api/user/create', function (req, res, next) {
 router.post('/api/user/update', function (req, res, next) {
     const { nombre_usuario, contrasena } = req.body
     moviesModel.updateUser(nombre_usuario, contrasena).then(user=>{
-        res.status(200).send({message: 'update data user '+nombre_usuario, rowCount: user.rowCount})
+        res.status(200).send({message: 'update data user '+ nombre_usuario, rowCount: user.rowCount})
     }).catch(err => {
         console.log(err)
         return res.status(500).send('Error updating user ')
