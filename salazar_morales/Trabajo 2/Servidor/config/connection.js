@@ -13,4 +13,3 @@ pool.on('connect', () => {
 });
 
 module.exports = pool
-
