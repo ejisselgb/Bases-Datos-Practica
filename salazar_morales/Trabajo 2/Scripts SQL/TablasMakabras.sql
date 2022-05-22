@@ -190,7 +190,7 @@ CREATE TABLE "Grupo 7 - T2"."CALIFICACION_PELICULA" (
     id_calificacion_pelicula VARCHAR(7) UNIQUE,
     id_pelicula VARCHAR(7) UNIQUE,
     id_perfil VARCHAR(7) UNIQUE,
-    calificacion_pelicula VARCHAR(4),
+    calificacion_pelicula VARCHAR(10),
     comentarios_pelicula VARCHAR(300),
 
     CONSTRAINT pk_calificacion_pelicula PRIMARY KEY (id_calificacion_pelicula),
@@ -250,7 +250,7 @@ CREATE TABLE "Grupo 7 - T2"."PELICULAS_FAVORITAS" (
 CREATE TABLE "Grupo 7 - T2"."PLANES" (
     id_plan VARCHAR(7) UNIQUE,
     descripcion_plan VARCHAR(10),
-    precio_plan VARCHAR(12),
+    precio_plan INT,
     duracion_plan TIME,
     calidad_video VARCHAR(10),
     numero_pantallas INTEGER,

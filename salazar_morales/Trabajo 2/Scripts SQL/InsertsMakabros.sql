@@ -102,7 +102,7 @@ INSERT INTO
 VALUES
     ('PL01', 'Basico', 'COP $10.000', '30 dias', '1080p', 4),
     ('PL02', 'Estandar', 'COP $15.000', '30 dias', '4k', 4),
-    ('PL03', 'Premium', 'COP $20.000', '30 dias', '4k-8k', 4);
+    ('PL03', 'Premium', 20000, '30 dias', '4k-8k', 4);
 
 
 
@@ -227,28 +227,147 @@ VALUES
 
 
 
+-------------------------Suscripciones
+
+    
+INSERT INTO 
+    "Grupo 7 - T2"."SUSCRIPCIONES" (id_suscripcion, id_usuario, id_plan, fecha_pago, fecha_vencimiento, estado)
+
+VALUES
+    ('SUS01', 'U01', 'PL01', '2022-02-12 11:00:54', '2022-03-12 11:00:54', 'activa'),
+    ('SUS02', 'U02', 'PL02', '2022-03-24 11:00:54', '2022-04-24 11:00:54', 'activa'),
+    ('SUS03', 'U03', 'PL03', '2022-07-02 11:00:54', '2022-08-02 11:00:54', 'activa'),
+    ('SUS04', 'U04', 'PL01', '2022-09-29 11:00:54', '2022-10-29 11:00:54', 'activa'),
+    ('SUS05', 'U05', 'PL02', '2022-04-17 11:00:54', '2022-05-17 11:00:54', 'activa'),
+    ('SUS06', 'U06', 'PL03', '2022-02-01 11:00:54', '2022-03-01 11:00:54', 'activa'),
+    ('SUS07', 'U07', 'PL01', '2022-02-11 11:00:54', '2022-03-11 11:00:54', 'activa'),
+    ('SUS08', 'U08', 'PL02', '2022-11-06 11:00:54', '2022-12-06 11:00:54', 'activa'),
+    ('SUS09', 'U09', 'PL03', '2022-12-30 11:00:54', '2023-01-30 11:00:54', 'activa'),
+    ('SUS10', 'U010', 'PL01', '2022-07-22 11:00:54', '2022-08-22 11:00:54', 'activa'),
+    ('SUS11', 'U011', 'PL02', '2022-01-28 11:00:54', '2022-02-28 11:00:54', 'activa'),
+    ('SUS12', 'U012', 'PL03', '2022-07-12 11:00:54', '2022-08-12 11:00:54', 'activa'),
+    ('SUS13', 'U013', 'PL01', '2022-01-09 11:00:54', '2022-02-09 11:00:54', 'activa'),
+    ('SUS14', 'U014', 'PL02', '2022-11-06 11:00:54', '2022-12-06 11:00:54', 'activa'),
+    ('SUS15', 'U015', 'PL03', '2022-12-10 11:00:54', '2023-01-10 11:00:54', 'activa');
+
+    
+--------------------Categorias Peliculas
+
+INSERT INTO
+  "Grupo 7 - T2"."CATEGORIAS_PELICULAS" (id_categorias_peliculas, id_categoria, id_pelicula)
+VALUES
+  ('CP01', 'CT01', 'PE01'),
+  ('CP02', 'CT04', 'PE01'),
+  ('CP03', 'CT12', 'PE01'),
+  ('CP04', 'CT08', 'PE01'),
+  ('CP05', 'CT09', 'PE01'),
+  ('CP06', 'CT01', 'PE02'),
+  ('CP07', 'CT04', 'PE02'),
+  ('CP08', 'CT12', 'PE02'),
+  ('CP09', 'CT08', 'PE02'),
+  ('CP10', 'CT01', 'PE03'),
+  ('CP11', 'CT04', 'PE03'),
+  ('CP12', 'CT12', 'PE03'),
+  ('CP13', 'CT03', 'PE03'),
+  ('CP14', 'CT01', 'PE04'),
+  ('CP15', 'CT02', 'PE04'),
+  ('CP16', 'CT04', 'PE04'),
+  ('CP17', 'CT08', 'PE04'),
+  ('CP18', 'CT09', 'PE04'),
+  ('CP19', 'CT01', 'PE05'),
+  ('CP20', 'CT03', 'PE05'),
+  ('CP21', 'CT12', 'PE05');
+
+--------------------Categorias Series
+
+
+INSERT INTO
+  "Grupo 7 - T2"."CATEGORIAS_SERIES" (id_categorias_series, id_categoria, id_serie)
+VALUES
+  ('CS01', 'CT01', 'S01'),
+  ('CS02', 'CT02', 'S01'),
+  ('CS03', 'CT12', 'S01'),
+  ('CS04', 'CT05', 'S01'),
+  ('CS05', 'CT010', 'S01'),
+  ('CS06', 'CT01', 'S02'),
+  ('CS07', 'CT04', 'S02'),
+  ('CS08', 'CT12', 'S02'),
+  ('CS09', 'CT08', 'S02'),
+  ('CS10', 'CT01', 'S03'),
+  ('CS11', 'CT04', 'S03'),
+  ('CS12', 'CT12', 'S03'),
+  ('CS13', 'CT03', 'S03'),
+  ('CS14', 'CT01', 'S04'),
+  ('CS15', 'CT02', 'S04'),
+  ('CS16', 'CT04', 'S04'),
+  ('CS17', 'CT08', 'S04'),
+  ('CS18', 'CT09', 'S04'),
+  ('CS19', 'CT01', 'S05'),
+  ('CS20', 'CT03', 'S05'),
+  ('CS21', 'CT12', 'S05');
+
+
+--------------------Peliculas Favoritas 
+
+
+INSERT INTO 
+  "Grupo 7 - T2"."PELICULAS_FAVORITAS" (id_favorita, id_perfil, id_pelicula)
+VALUES 
+  ('F01' , 'PF101' , 'PE01'),
+  ('F02' , 'PF102' , 'PE02'),
+  ('F03' , 'PF201' , 'PE03'),
+  ('F04' , 'PF202' , 'PE04'),
+  ('F05' , 'PF301' , 'PE05'),
+  ('F06' , 'PF302' , 'PE01'),
+  ('F07' , 'PF401' , 'PE02'),
+  ('F08' , 'PF402' , 'PE03'),
+  ('F09' , 'PF501' , 'PE04'),
+  ('F10' , 'PF502' , 'PE05'),
+  ('F11' , 'PF601' , 'PE01'),
+  ('F12' , 'PF602' , 'PE02'),
+  ('F13' , 'PF701' , 'PE03'),
+  ('F14' , 'PF702' , 'PE04'),
+  ('F15' , 'PF801' , 'PE05'),
+  ('F16' , 'PF802' , 'PE01'),
+  ('F17' , 'PF901' , 'PE02'),
+  ('F18' , 'PF902' , 'PE03'),
+  ('F19' , 'PF111' , 'PE04'),
+  ('F20' , 'PF112' , 'PE05'),
+  ('F21' , 'PF211' , 'PE01'),
+  ('F22' , 'PF212' , 'PE02'),
+  ('F23' , 'PF311' , 'PE03'),
+  ('F24' , 'PF312' , 'PE04'),
+  ('F25' , 'PF411' , 'PE05'),
+  ('F26' , 'PF412' , 'PE01'),
+  ('F27' , 'PF511' , 'PE02'),
+  ('F28' , 'PF512' , 'PE03'),
+  ('F29' , 'PF611' , 'PE04'),
+  ('F30' , 'PF612' , 'PE05');
+
+
+
+--------------------Califiacion Peliculas
+
+
+
+INSERT INTO 
+  "Grupo 7 - T2"."CALIFICACION_PELICULA" (id_calificacion_pelicula, id_pelicula, id_perfil, calificacion_pelicula, comentarios_pelicula)
+VALUES 
+  ('CFP01', 'PE01', 'PF101', '5.5/10', 'Estuvo algo mala'),
+  ('CFP02', 'PE01', 'PF102', '7.3/10', 'Estuvo entretenida'),
+  ('CFP03', 'PE02', 'PF201', '9.5/10', 'Muy buena'),
+  ('CFP04', 'PE02', 'PF202', '9.0/10', 'Muy buena'),
+  ('CFP05', 'PE03', 'PF301', '4.5/10', 'Casi no me gustó'),
+  ('CFP06', 'PE03', 'PF302', '8.0/10', 'Muy buena'),
+  ('CFP07', 'PE04', 'PF601', '8.7/10', 'Muy buena'),
+  ('CFP08', 'PE04', 'PF702', '9.3/10', 'Muy buena'),
+  ('CFP09', 'PE05', 'PF901', '9.8/10', 'Muy buena'),
+  ('CFP10', 'PE05', 'PF501', '10/10', 'Muy buena');
 
 
 
 
 
------------------CONSULTAS--------------------------------------------------------------------------------------------------
-
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'pepepe@correo.com' AND contrasena = 'frozen123';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'oliviah@correo.com' AND contrasena = 'monotree1';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'vaal@correo.com' AND contrasena = 'lionelmessi';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'nana.op@correo.com' AND contrasena = 'ilichil127';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'shirou28@correo.com' AND contrasena = 'excalibur.saber28';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'shisaki@correo.com' AND contrasena = 'sshisaki28';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'chuu@correo.com' AND contrasena = 'lovemotion';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'emily@correo.com' AND contrasena = 'paris123';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'voyager@correo.com' AND contrasena = 'littleprince1';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'yuuuki@correo.com' AND contrasena = 'princessknight';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'emilia@correo.com' AND contrasena = 'rezeroxd';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'fubuki@correo.com' AND contrasena = 'nekokitsune';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'jinsoul@correo.com' AND contrasena = 'ppt123456';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'vivi@correo.com' AND contrasena = 'bingxiling';
-SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'tommy@correo.com' AND contrasena = 'nekoooooooo1';
 
 
 
@@ -256,11 +375,3 @@ SELECT * FROM "Grupo 7 - T2"."USUARIOS" WHERE correo = 'tommy@correo.com' AND co
 
 
 
-
-
-SELECT 
-	pe.id_perfiles_usuario, pe.nombre_perfil, us.id_usuario, us.contrasena, us.correo, us.tarjeta, us.telefono 
-FROM 
-	"Grupo 7 - T2"."PERFILES" as pe
-LEFT JOIN "Grupo 7 - T2"."USUARIOS" as us 
-	ON pe.id_perfiles_usuario = us.id_usuario;
