@@ -2,12 +2,30 @@ const connection = require('../config/connection')
 
 
 module.exports = {
+    
+    async getAllUser() {
+        const querySelect = `SELECT * FROM "Grupo 7".Usuario;`
+        const result = await connection.query(querySelect)
+        return result
+    },
+
+    async getAllMovie() {
+        const querySelect = `SELECT * FROM "Grupo 7".Pelicula;`
+        const result = await connection.query(querySelect)
+        return result
+    },
+
+    async getPelicula() {
+        const querySelect = `SELECT * FROM "Grupo 7".Pelicula WHERE id_pelicula = $(id) ;`
+        const result = await connection.query(querySelect)
+        return result
+    },
 
     async getUser(username, password) {
         const querySelect = `'${username}' and '${password}';`
         const result = await connection.query(querySelect)
         return result
-    },
+    }, 
 
     async insertUser(username, password){
         const queryInsert = `'${username}' and '${password}';`
@@ -33,3 +51,4 @@ module.exports = {
         return result
     }
 }
+

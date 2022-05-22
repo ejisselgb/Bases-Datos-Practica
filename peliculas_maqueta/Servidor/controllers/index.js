@@ -23,6 +23,7 @@ router.get('/api', function (req, res, next) {
     })
 })
 
+
 router.post('/api/user', function (req, res, next) {
     const { username, password } = req.body
     moviesModel.getUser(username, password).then(user=>{
@@ -32,6 +33,7 @@ router.post('/api/user', function (req, res, next) {
         return res.status(500).send('Error getting user')
     })
 })
+
 
 router.post('/api/user/create', function (req, res, next) {
     const { username, password } = req.body
@@ -56,7 +58,54 @@ router.post('/api/user/update', function (req, res, next) {
 router.get('/api/movie/:id', function (req, res, next) {
     const id = req.params.id
 
-    moviesModel.getMovieId(id).then(user=>{
+    moviesModel.getPelicula(id).then(movie=>{
+        res.status(200).send(movie.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting user')
+    })
+})
+
+
+router.get('/api/allusers', function (req, res, next) {
+    moviesModel.getAllUser().then(user=>{
+        res.status(200).send(user.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting user')
+    })
+})
+
+router.get('/api/allmovies', function (req, res, next) {
+    moviesModel.getAllMovie().then(user=>{
+        res.status(200).send(user.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting user')
+    })
+})
+
+
+router.get('/api/user/info', function (req, res, next) {
+    moviesModel.getAllMovie().then(user=>{
+        res.status(200).send(user.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting user')
+    })
+})
+
+router.get('/api/allmovies', function (req, res, next) {
+    moviesModel.getAllMovie().then(user=>{
+        res.status(200).send(user.rows)
+    }).catch(err => {
+        console.log(err)
+        return res.status(500).send('Error getting user')
+    })
+})
+
+router.get('/api/allmovies', function (req, res, next) {
+    moviesModel.getAllMovie().then(user=>{
         res.status(200).send(user.rows)
     }).catch(err => {
         console.log(err)
