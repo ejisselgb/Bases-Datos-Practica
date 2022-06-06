@@ -1,14 +1,14 @@
 {
-    "TableName": "Favorites_Grupo_3",
+    "TableName": "PELICULAS",
     "KeySchema" : [
         {
-            "AttributeName" : "id",
+            "AttributeName" : "id_pelicula",
             "KeyType" : "HASH"
         }
     ],
     "AttributeDefinitions": [
         {
-            "AttributeName" : "id",
+            "AttributeName" : "id_pelicula",
             "AttributeType" : "N"
         }
     ],
