@@ -1,0 +1,33 @@
+Inserta la información usando las consultas vistas en clase o en la guía, NO DE MANERA MANUAL.
+
+db.USERS.insertOne({
+    "_id": ObjectId("62a0ffbe04c38e7533a7e029"),
+    "username": "DanielKirchoff",
+    "email": "danielroldan123@yahoo.es",
+    "password": "165684",
+    "name": {
+      "given": "Daniel",
+      "family": "Roldan"
+    }
+  })
+
+------------------------------------------------------------------------------------------------------------------------
+Edita, elimina y selecciona elementos de tu base de datos utilizando las consultas vistas en clase.
+------------------------------------------------------------------------------------------------------------------------
+Editar elementos:
+db.USERS.updateOne(
+   {"username": "DanielKirchoff"},
+   {
+     $set: { "email": "adrephos@gmail.com"},
+     $currentDate: { lastModified: true }
+   }
+)
+------------------------------------------------------------------------------------------------------------------------
+Eliminar elementos:
+
+db.USERS.deleteOne({ username : "DanielKirchoff"})
+------------------------------------------------------------------------------------------------------------------------
+Seleccionar los elementos de una colección:
+
+db.USERS.find()
+
