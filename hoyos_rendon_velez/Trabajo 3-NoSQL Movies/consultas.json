@@ -1,0 +1,75 @@
+
+
+///Edita, elimina y selecciona elementos de tu base de datos utilizando las consultas vistas en clase.
+
+//SELECCIONA
+db.USUARIO.find({}); //selecciona todos los documentos de una coleccion
+db.USUARIO.find({perfiles:"p2"}, { "perfiles.$": 1,"perfiles.edad": { $eq: 10 }}); //selecciona aquellos documentos que contengan edad igual a 15 (sale toda la info)
+db.USUARIO.find({nombre: { $eq: "Carla Sofia"}}); //selecciona aquellos documentos que tengan un nombre igual a "Carla Sofia" (sale toda la info)
+
+//ACTUALIZAR
+db.USUARIO.update({"_id": "us1"}, {$set: {"email": "viviHyos1g@gmail.com"}}) 
+
+//ELIMINAR
+db.USUARIO.deleteOne({"Nombre":"Viviana hoyos"})
+db.USUARIO.deleteOne({"_id":ObjectId('629fc8f0f431e6d60ae3aab6')})
+
+
+////////////////////////////////CONSULTAS///////////////////////////////////////////////
+
+//1
+//Seleccionar todas las películas que fueron estrenadas después del 2017
+{fecha_publicacion: {$gt: ISODate("2017-01-01T00:00:00.000Z")}}
+
+db.PELICULAS.find(
+{fecha_publicacion: 
+    {$gt: ISODate("2017-01-01T00:00:00.000Z")}})
+
+//2
+//Seleccionar los actores de solo una película, buscar y mostrar en que otras películas han trabajado esos actores
+
+var arreglo="actores";
+var nombre_pelicula="Rapidos y furiosos";
+db.PELICULAS.distinct(arreglo,{nombre_pelicula: nombre_pelicula},{actores:1,_id:0}).forEach(function(actor)
+{
+    var consulta=db.PELICULAS.find({actores:{$all:[actor]}},{nombre_pelicula:1}).toArray();
+    print("ACTOR: "+actor)
+    print(consulta);
+    print("----------------------------")
+}
+)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Seleccionar los autores de solo una película, buscar y mostrar en que otras películas han trabajado esos autores
+var arreglo="autores";
+var nombre_pelicula="Rapidos y furiosos";
+db.PELICULAS.distinct(arreglo,{nombre_pelicula: nombre_pelicula},{autores:1,_id:0}).forEach(function(autor)
+{
+    var consulta=db.PELICULAS.find({autores:{$all:[autor]}},{nombre_pelicula:1}).toArray();
+    print("AUTOR: "+autor)
+    print(consulta);
+    print("----------------------------")
+}
+)
+
+//3
+//Seleccionar los comentarios de una película quedebajo o iguale 3 
+
+db.CALIFICACIONES.find({estrellas:{$lte:3}},{estrellas:1,comentario:1,id_pelicula:1})
+
+
+//4
+//Seleccionar los comentarios de una película que tengan una califiación por encima de 3
+
+db.CALIFICACIONES.find({estrellas:{$gt:3}},{estrellas:1,comentario:1,id_pelicula:1})
+
+
+
+///EXTRAS
+///TRAE LA INFORMACION DE LAS PELICULAS FAVORITAS DE UN PERFIL (DADO EL EMAIL, CONTRASEÑA Y NOMBRE DE PERFIL)
+db.USUARIO.distinct("perfiles.peliculas_favoritas",{email:"viviHyos@gmail.com",contrasena:"viviHyos123","perfiles.nombre_perfil":"Sedita"}, {"perfiles.$": 1 }).forEach(function(peli)
+    {
+        var consulta=db.PELICULAS.find({_id:peli}).toArray();
+        print(consulta);
+    }
+    )

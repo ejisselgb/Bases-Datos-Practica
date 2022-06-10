@@ -1,0 +1,438 @@
+
+//////////COLECCION DE USUARIOS////////////////////////////////////////////////////////////////////////////////
+
+db.USUARIO.insertMany([{
+    "_id":"us1",
+    "email":"viviHyos@gmail.com",
+    "contrasena":"viviHyos123",
+    "telefono":"3057865",
+    "tarjeta":23463276362575,
+    "perfiles":[{
+        "_id":"p1", 
+        "pais":"Colombia", 
+        "zona":"Antioquia",
+        "ciudad":"Medellin",
+        "nombre_perfil":"Sedita", 
+        "foto_perfil":"fotofachera2.jpg", 
+        "edad":10,
+        "peliculas_favoritas":["mov01","mov03"]
+
+    },{
+        "_id":"p2",
+        "pais":"Venezuela", 
+        "zona":"Monagas", 
+        "ciudad":"Maturin", 
+        "nombre_perfil":"Carla", 
+        "foto_perfil":"fotofachera3.jpg", 
+        "edad":28,
+        "peliculas_favoritas":["mov01",]
+    },
+    {
+        "_id":"p3",
+        "pais":"Colombia", 
+        "zona":"Cundinamarca", 
+        "ciudad":"Bogota", 
+        "nombre_perfil":"Velez", 
+        "foto_perfil":"fotofachera4.jpg", 
+        "edad":40,
+        "peliculas_favoritas":["mov01"]
+    }],
+"suscripciones":[
+{  
+    "fecha_facturacion":ISODate("2020-05-22T00:00:00.000Z"),
+    "activo":false,
+    "nombre_plan":"Plan Tercer Mundista",
+    "descripcion_plan":"Solo se puede usar 1 pantalla a la vez,acceso a todas las peliculas, series y documentales",
+    "precio":16900
+},
+{  
+    "fecha_facturacion":ISODate("2020-06-22T00:00:00.000Z"),
+    "activo":true,
+    "nombre_plan":"Plan Normal",
+    "descripcion_plan":"Se pueden usar 2 pantallas a la vez, se puede descargar contenido en 2 dispositivos, acceso a todas las peliculas,series y documentales en HD",
+    "precio":26900
+}]
+},
+{
+    "_id":"us2",
+    "email":"carlar@gmail.com",
+    "contrasena":"cr1567",
+    "telefono":"30544567321",
+    "tarjeta":23463276372575,
+    "perfiles":[{
+        "_id":"p4", 
+        "pais":"Colombia", 
+        "zona":"Antioquia",
+        "ciudad":"Medellin",
+        "nombre_perfil":"Pitumana", 
+        "foto_perfil":"fotofachera2.jpg", 
+        "edad":7,
+        "peliculas_favoritas":["mov01","mov03"]
+
+    },{
+        "_id":"p5",
+        "pais":"Venezuela", 
+        "zona":"Monagas", 
+        "ciudad":"Maturin", 
+        "nombre_perfil":"Daniela", 
+        "foto_perfil":"fotofachera3.jpg", 
+        "edad":23,
+        "peliculas_favoritas":["mov02"]
+    }
+],
+"suscripciones":[
+{  
+    "fecha_facturacion":ISODate("2020-05-22T00:00:00.000Z"),
+    "activo":false,
+    "nombre_plan":"Plan Gucci",
+    "descripcion_plan":"Se pueden usar 4 pantallas a la vez, descargar contenido en hasta 4 dispositivos, acceso a todas las peliculas series y documentales en 4K",
+    "precio":38900
+}]
+},
+{
+    "_id":"us3",
+    "email":"velez@gmail.com",
+    "contrasena":"mcqueen01",
+    "telefono":"3147335134",
+    "tarjeta":23463276362589,
+    "perfiles":[{
+        "_id":"p6", 
+        "pais":"Colombia", 
+        "zona":"Antioquia",
+        "ciudad":"Medellin",
+        "nombre_perfil":"MacQueen", 
+        "foto_perfil":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Lightning_McQueen_%2834615708803%29.jpg/1200px-Lightning_McQueen_%2834615708803%29.jpg", 
+        "edad":18,
+        "peliculas_favoritas":["mov02","mov03"]
+
+    },{
+        "_id":"p7",
+        "pais":"Venezuela", 
+        "zona":"Monagas", 
+        "ciudad":"Maturin", 
+        "nombre_perfil":"Carla", 
+        "foto_perfil":"fotofachera3.jpg", 
+        "edad":28,
+        "peliculas_favoritas":["mov01",]
+    },
+    {
+        "_id":"p8",
+        "pais":"Colombia", 
+        "zona":"Cundinamarca", 
+        "ciudad":"Bogota", 
+        "nombre_perfil":"Velez", 
+        "foto_perfil":"fotofachera4.jpg", 
+        "edad":40,
+        "peliculas_favoritas":["mov01"]
+    }
+],
+"suscripciones":[
+{  
+    "fecha_facturacion":ISODate("2020-06-22T00:00:00.000Z"),
+    "activo":true,
+"nombre_plan":"Plan Normal",
+"descripcion_plan":"Se pueden usar 2 pantallas a la vez, se puede descargar contenido en 2 dispositivos, acceso a todas las peliculas,series y documentales en HD",
+"precio":26900
+}
+]
+}
+
+])
+
+
+//////////COLECCION DE PELICULAS////////////////////////////////////////////////////////////////////////////////
+
+db.PELICULAS.insertMany ([{
+    "_id":"mov01",
+    "nombre_pelicula":"Rapidos y furiosos",
+    "poster":"https://static.wikia.nocookie.net/atodogas/images/d/d7/R%C3%A1pidos_y_furiosos_9_-_LAT-3.jpeg/revision/latest?cb=20210415055215&path-prefix=es",
+    "trailer":"https://www.youtube.com/watch?v=oW2FUA8fjzM&ab_channel=FilmSelectEspa%C3%B1ol','https://static.wikia.nocookie.net/atodogas/images/d/d7/R%C3%A1pidos_y_furiosos_9_-_LAT-3.jpeg/revision/latest?cb=20210415055215&path-prefix=es',13,'2001-06-22",
+    "restriccion_edad":13,
+    "fecha_publicacion":ISODate("2019-06-22T00:00:00.000Z"),
+    "sinopsis":"Dom Toretto y su equipo se unen para detener un complot del asesino más hábil y el conductor más exitoso que jamás hayan conocido: el hermano abandonado de Dom",
+    "tiempo_total":"1:30:0",
+    "categorias":["Accion"],
+    "actores":["Vin Diesel","Paul Walker","Michelle Rodriguez","Jordana Brewster","Sung Kang","Jack Conley","Shea Whigham"],
+    "autores":["Ramon Antonio","Chris Rock","Michael Henderson","Jorge Isaacs"],
+    "idiomas":["English","Espanol","portugues","Italiano"],
+    
+},
+{
+    "_id":"mov02",
+    "nombre_pelicula":"Shrek",
+    "poster":"https://images-na.ssl-images-amazon.com/images/S/pv-target-images/6d0b08a81e519ca8b33e518b80891097fed2b4b96f0e9453a9991f846bba133d._RI_V_TTW_.jpg",
+    "trailer":"https://www.youtube.com/watch?v=oW2FUA8fjzM&ab_channel=FilmSelectEspa%C3%B1ol",
+    "restriccion_edad":13,
+    "fecha_publicacion":ISODate("2016-05-22T00:00:00.000Z"),
+    "sinopsis":"Érase una vez un ogro verde llamado Shrek que vivía en un pantano muy lejano, feliz con sus baños de barro y su particular concepto de la higiene. Pero un buen día, su preciada soledad se ve interrumpida por la invasión de un grupo de molestos personajes salidos de cuentos clásicos",
+    "tiempo_total":"1:30:0",
+    "categorias":["Comedia","Animacion"],
+    "actores":["Shea Whigham","Eddie Murphy","Cameron Diaz","Vin Diesel"],
+    "autores":["Ramon Antonio","Charles Meey","Camilo Newt"],
+    "idiomas":["English","Espanol","portugues","Italiano"],
+    
+},
+{
+    "_id":"mov03",
+    "nombre_pelicula":"El viaje de chihiro",
+    "poster":"https://static.wikia.nocookie.net/disney/images/c/c5/Spirited_Away.jpg/revision/latest?cb=20130421015528&path-prefix=es",
+    "trailer":"https://www.youtube.com/watch?v=5Fgq4Osh6XQ&ab_channel=V%C3%A9rtigoFilms",
+    "restriccion_edad":10,
+    "fecha_publicacion":ISODate("2018-11-27T00:00:00.000Z"),
+    "sinopsis":"En rumbo a su casa nueva, Chihiro, una niña caprichosa y nerviosa investiga con su familia un parque de diversiones abandonado. Al comer de un banquete magnifico, sus papas son transformados en cerdos. Lo que parecía ser un parque es un balneario para dioses antiguos, espíritus y seres mágicos, operado por la hechicera Yubaba. Chihiro tendrá que demostrar su valor como empleada para poder librar a su familia del hechizo antes de que sean cocinados para los clientes de Yubaba",
+    "tiempo_total":"2:00:0",
+    "categorias":["Fantasia","Animacion"],
+    "actores":["Jordana Brewster","Bradd Pitt","Paul Walker","Will Smith"],
+    "autores":["Ramon Antonio","Michael Henderson","Johnnny Simons"],
+    "idiomas":["English","Espanol","Portugues","Japones"],
+    
+}]
+)
+
+//////////COLECCION DE SERIES /////////////////////////////////////////////////////////////////////////////////
+
+db.SERIES.insertMany ([
+    {
+    "_id":"ser01",
+    "nombre_serie":"Gambito de dama",
+    "poster":"https://pics.filmaffinity.com/Gambito_de_dama_Miniserie_de_TV-906552919-large.jpg",
+    "trailer":"https://www.youtube.com/watch?v=-BBgzgNgzeQ&ab_channel=javirodr%C3%ADguez",
+    "restriccion_edad":15,
+    "fecha_publicacion":ISODate("2019-04-10T00:00:00.000Z"),
+    "sinopsis":"La huérfana y prodigio del ajedrez, Beth Harmon, lucha contra la adicción mientras busca convertirse en la mejor jugadora de ajedrez del mundo",
+    "capitulos":[{
+        "nombre_capitulo":"Caballero",
+        "previewimagen":"Caballero.jpg",
+        "sinopsis":"Se juega un torneo de ajedrez",
+        "tiempo_total_capitulo":"00:35:00",
+        "temporada":"1",   
+    },
+    {
+        "nombre_capitulo":"Ajedrez",
+        "previewimagen":"Ajedrez1.jpg",
+        "sinopsis":"La dama, aprende a jugar ajedrez",
+        "tiempo_total_capitulo":"00:20:00",
+        "temporada":"1",   
+    },
+    {
+        "nombre_capitulo":"Capitulo 3",
+        "previewimagen":"Capitulo3.jpg",
+        "sinopsis":"El caballo se come la reina",
+        "tiempo_total_capitulo":"00:32:00",
+        "temporada":"2",   
+    }
+
+    ],
+    "categorias":["Drama","Deporte"],
+    "actores":["Anya Taylor","Pepito Perez","Shakira","Jordan Belfort","The Rock","Leonardo Dicaprio"],
+    "idiomas":["English","Espanol","portugues","Italiano"],
+    
+},
+{
+    "_id":"ser02",
+    "nombre_serie":"Viva el Rey Julien",
+    "poster":"https://static.wikia.nocookie.net/doblaje/images/d/d8/Rey_julien.jpg/revision/latest/top-crop/width/360/height/450?cb=20141224024306&path-prefix=es",
+    "trailer":"https://www.youtube.com/watch?v=1OW3_TCcnjk&ab_channel=NetflixLatinoam%C3%A9rica'",
+    "restriccion_edad":10,
+    "fecha_publicacion":ISODate("2014-04-10T00:00:00.000Z"),
+    "sinopsis":"Las aventuras de Julien, el nuevo rey de la selva, que ha decidido transformar el reino en una zona de fiesta.",
+    "capitulos":[{
+        "nombre_capitulo":"Rey Julien",
+        "previewimagen":"reyJulien1.jpg",
+        "sinopsis":"Piloto Julien",
+        "tiempo_total_capitulo":"00:20:00",
+        "temporada":"1",   
+    },
+    {
+        "nombre_capitulo":"Rey Julein 10",
+        "previewimagen":"reyJulien2.jpg",
+        "sinopsis":"Julien hace nuevos amigos",
+        "tiempo_total_capitulo":"00:37:00",
+        "temporada":"1",   
+    },
+    {
+        "nombre_capitulo":"Rey Julien 6",
+        "previewimagen":"Capitulo6t2.jpg",
+        "sinopsis":"Julien se reune con sus familia",
+        "tiempo_total_capitulo":"00:37:00",
+        "temporada":"2",   
+    }
+
+    ],
+    "categorias":["Drama","Comedia","Aventura","Animacion"],
+    "actores":["Michael Jackson","Lionel Andres Messi","Megan Fox"],
+    "idiomas":["English","Espanol","portugues","Italiano"],
+},
+{
+    "_id":"ser03",
+    "nombre_serie":"You",
+    "poster":"https://es.web.img3.acsta.net/pictures/18/12/31/02/49/2373131.jpg",
+    "trailer":"https://www.youtube.com/watch?v=69H-vtHxbdk&ab_channel=NetflixLatinoam%C3%A9rica",
+    "restriccion_edad":18,
+    "fecha_publicacion":ISODate("2010-04-10T00:00:00.000Z"),
+    "sinopsis":"Una historia de amor del siglo XXI sobre un obsesivo, quien utiliza la era digital hiperconectada para enamorar a la mujer de sus sueños.",
+    "capitulos":[{
+        "nombre_capitulo":"You 1",
+        "previewimagen":"you1.jpg",
+        "sinopsis":"Lagrimas de un Buñuelo",
+        "tiempo_total_capitulo":"00:37:00",
+        "temporada":"1",   
+    },
+    {
+        "nombre_capitulo":"You 2",
+        "previewimagen":"you2.jpg",
+        "sinopsis":"Detras del ultimo no hay nadie",
+        "tiempo_total_capitulo":"00:37:00",
+        "temporada":"",   
+    },
+    {
+        "nombre_capitulo":"You 3",
+        "previewimagen":"You3.jpg",
+        "sinopsis":"Lagrimas de un asesinato",
+        "tiempo_total_capitulo":"00:39:00",
+        "temporada":"3",   
+    }
+
+    ],
+    "categorias":["Drama","Romance","Accion","Suspenso"],
+    "actores":["Bill Camp","Margot Robbie","Alexandra Daddario","Jim Carrey","Will Smith","Tom Cruise"],
+    "idiomas":["English","Espanol","portugues","Italiano"],
+    
+}
+
+])
+
+//////////COLECCION DE CALIFICACIONES////////////////////////////////////////////////////////////////////////////
+
+db.CALIFICACIONES.insertMany ([
+    {
+        "id_pelicula":"mov01",
+        "id_perfil":"p1",
+        "comentario":"Esta chevere la pelicula",
+        "estrellas":4.5
+    },
+    {
+        "id_pelicula":"mov01",
+        "id_perfil":"p2",
+        "comentario":"Increible Shrek",
+        "estrellas":5
+    },
+    {
+        "id_pelicula":"mov01",
+        "id_perfil":"p3",
+        "comentario":"Excelente pelicula",
+        "estrellas":5
+    },
+    {
+        "id_pelicula":"mov02",
+        "id_perfil":"p4",
+        "comentario":"Esta chevere la pelicula",
+        "estrellas":4
+    },
+    {
+        "id_pelicula":"mov02",
+        "id_perfil":"p5",
+        "comentario":"Increible",
+        "estrellas":5
+    },
+    {
+        "id_pelicula":"mov02",
+        "id_perfil":"p6",
+        "comentario":"Que aburrida",
+        "estrellas":2
+    }, 
+    {
+        "id_pelicula":"mov03",
+        "id_perfil":"p7",
+        "comentario":"Esta chevere la pelicula",
+        "estrellas":4.5
+    },
+    {
+        "id_pelicula":"mov03",
+        "id_perfil":"p2",
+        "comentario":"Increible Shrek",
+        "estrellas":5
+    },
+    {
+        "id_pelicula":"mov03",
+        "id_perfil":"p3",
+        "comentario":"Excelente pelicula",
+        "estrellas":5
+    },
+    {
+        "id_pelicula":"mov01",
+        "id_perfil":"p1",
+        "comentario":"Esta Horrible la pelicula",
+        "estrellas":"1"
+    }
+
+
+])
+
+//////////COLECCION DE TIEMPO VISUALIZACION////////////////////////////////////////////////////////////////////////////////
+db.TIEMPO_VISUALIZACION.insertMany ([
+    {
+        "id_pelicula":"mov01",
+        "id_perfil":"p1",
+        "tiempo_visualizado":ISODate("2015-01-01T00:10:05.000Z")
+        
+    },
+    {
+        "id_pelicula":"mov01",
+        "id_perfil":"p2",
+        "tiempo_visualizado":ISODate("2017-01-01T00:15:00.20Z")
+
+    },
+    {
+        "id_pelicula":"mov01",
+        "id_perfil":"p3",
+        "tiempo_visualizado":ISODate("2022-01-01T01:01:05.000Z")
+
+    },
+    {
+        "id_pelicula":"mov02",
+        "id_perfil":"p4",
+        "tiempo_visualizado":ISODate("2021-11-11T00:30:05.000Z")
+
+    },
+    {
+        "id_pelicula":"mov02",
+        "id_perfil":"p5",
+        "tiempo_visualizado":ISODate("2022-04-05T00:45:03.000Z")
+
+    },
+    {
+        "id_pelicula":"mov02",
+        "id_perfil":"p6",
+        "tiempo_visualizado":ISODate("2019-03-05T00:13:15.000Z")
+
+    }, 
+    {
+        "id_pelicula":"mov03",
+        "id_perfil":"p7",
+        "tiempo_visualizado":ISODate("2018-05-06T02:00:04.000Z")
+
+    },
+    {
+        "id_pelicula":"ser01",
+        "id_perfil":"p2",
+        "tiempo_visualizado":ISODate("2019-04-15T01:11:07.000Z")
+
+    },
+    {
+        "id_pelicula":"mov03",
+        "id_perfil":"p8",
+        "tiempo_visualizado":ISODate("2018-05-11T00:55:45.000Z")
+
+    },
+    {
+        "id_pelicula":"ser02",
+        "id_perfil":"p1",
+        "tiempo_visualizado":ISODate("2022-06-09T00:09:40.000Z")
+
+    }
+])
+
+
+
+

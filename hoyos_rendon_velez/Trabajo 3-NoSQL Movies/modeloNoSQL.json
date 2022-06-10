@@ -1,0 +1,79 @@
+
+///USUARIO
+{
+    "_id":"string",
+    "email":"string",
+    "contrasena":"string",
+    "telefono":"string",
+    "tarjeta":"int",
+    "perfiles":[{
+        "_id":"string", 
+        "pais":"string", 
+        "zona":"string",
+        "ciudad":"string",
+        "nombre_perfil":"string", 
+        "foto_perfil":"string", 
+        "edad":"int",
+        "peliculas_favoritas":["string"]   
+    }
+],
+"suscripciones":[{  
+    "fecha_facturacion":"Date",
+    "activo":"boolean",
+    "nombre_plan":"string",
+    "descripcion_plan":"string",
+    "precio":"int"
+}]
+}
+
+///Peliculas
+{
+    "_id":"string",
+    "nombre_pelicula":"string",
+    "poster":"string",
+    "trailer":"string",
+    "restriccion_edad":"int",
+    "fecha_publicacion":"ISODate",
+    "sinopsis":"string",
+    "tiempo_total":"int",
+    "categorias":["string"],
+    "actores":["string"],
+    "autores":["string"],
+    "idiomas":["string"]
+}
+
+//Series
+{
+"_id":"string",
+"nombre_serie":"string",
+"poster":"string",
+"trailer":"string",
+"restriccion_edad":"int",
+"fecha_publicacion":"ISODate",
+"sinopsis":"string",
+"categorias":["string"],
+"actores":["string"],
+"idiomas":["string"],
+"capitulos":[{
+    "nombre_capitulo":"string",
+    "previewimagen":"string",
+    "sinopsis":"string",
+    "tiempo_total_capitulo":"ISODate",
+    "temporada":"string",   
+}]
+}
+
+//Calificacion
+    {
+        "id_pelicula":"string",
+        "id_perfil":"string",
+        "comentario":"string",
+        "estrellas":"int"
+    }
+
+//Tiempo Visualizacion
+{
+    "id_pelicula":"string",
+    "id_perfil":"string",
+    "tiempo_visualizado":"ISODate" 
+}
