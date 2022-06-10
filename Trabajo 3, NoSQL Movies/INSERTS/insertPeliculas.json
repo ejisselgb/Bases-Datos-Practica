@@ -1,0 +1,109 @@
+db.PELICULAS.insertMany([{
+    "id_pelicula": "123",
+    "nombre": "El Irlandes",
+    "fecha_publicacion": "2019-11-27",
+    "trailer": "www...",
+    "poster": "www...",
+    "descripcion": "description",
+    "categorias": [
+        "Acción",
+        "Ciencia ficción"
+    ],
+    "idiomas": [
+        "Español",
+        "Inglés"
+    ],
+    "autores": [
+        {
+            "nombre_autor": "Martin Scorsese",
+            "fecha_nacimiento": "1942-11-17",
+            "experiencia": 50
+        }
+    ],
+    "actores": [
+        {
+            "nombre": "Johnny Depp",
+            "fecha_nacimiento": "1963-06-09"
+        },
+        {
+            "nombre": "Leonardo DiCaprio",
+            "fecha_nacimiento": "1974-11-11"
+        }
+    ]
+},
+{
+    "id_pelicula": "124",
+    "nombre": "No Mires Arriba",
+    "fecha_publicacion": "2021-12-10",
+    "trailer": "www...",
+    "poster": "www...",
+    "descripcion": "description",
+    "categorias": [
+        "Acción",
+        "Ciencia ficción",
+        "Suspenso"
+    ],
+    "idiomas": [
+        "Español",
+        "Inglés"
+    ],
+    "autores": [
+        {
+            "nombre_autor": "Adam McKay",
+            "fecha_nacimiento": "1968-04-17",
+            "experiencia": 40
+        }
+    ],
+    "actores": [
+        {
+            "nombre": "Johnny Depp",
+            "fecha_nacimiento": "1963-06-09"
+        },
+        {
+            "nombre": "Brad Pitt",
+            "fecha_nacimiento": "1963-12-18"
+        },
+        {
+            "nombre": "Leonardo DiCaprio",
+            "fecha_nacimiento": "1974-11-11"
+        }
+    ]
+},
+{
+    "id_pelicula": "125",
+    "nombre": "The Dark Knight",
+    "fecha_publicacion": "2008-07-14",
+    "trailer": "www...",
+    "poster": "www...",
+    "descripcion": "description",
+    "categorias": [
+        "Drama",
+        "Ciencia ficción",
+        "Suspenso"
+    ],
+    "idiomas": [
+        "Español",
+        "Inglés"
+    ],
+    "autores": {
+        "nombre_autor": "Christopher Nolan",
+        "fecha_nacimiento": "1942-07-30",
+        "experiencia": 40
+    },
+    "actores": [
+        {
+            "nombre": "Johnny Depp",
+            "fecha_nacimiento": "1963-06-09"
+        },
+        {
+            "nombre": "Keanu Reeves",
+            "fecha_nacimiento": "1964-09-02"
+        },
+        {
+            "nombre": "Leonardo DiCaprio",
+            "fecha_nacimiento": "1974-11-11"
+        }
+    ]
+}
+
+])

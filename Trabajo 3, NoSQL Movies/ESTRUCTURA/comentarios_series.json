@@ -1,0 +1,6 @@
+{
+    "id_perfil": "string",
+    "id_serie": "string",
+    "calificacion": int,
+    "comentario": "string"
+}

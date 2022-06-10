@@ -1,0 +1,25 @@
+db.COMENTARIOS_SERIES.insertMany([{
+    "id_perfil": "123",
+    "id_serie": "123",
+    "comentario": "Muy bueno, con atun blanco",
+    "calificacion": 2
+},
+{
+    "id_perfil": "124",
+    "id_serie": "123",
+    "descripcion_comentario": "Muy bueno, con atun blanco",
+    "calificacion": 5
+},
+{
+    "id_perfil": "125",
+    "id_serie": "125",
+    "descripcion_comentario": "No muy bueno, sin atun blanco",
+    "calificacion": 4
+},
+{
+    "id_perfil": "123",
+    "id_serie": "124",
+    "descripcion_comentario": "Muy bueno, sin atun blanco",
+    "calificacion": 5
+}
+])

@@ -1,0 +1,178 @@
+db.USUARIOS.insertMany([{
+    "id": "123",
+    "nombre-usuario": "JuanT",
+    "correo": "juan@gmail.com",
+    "contrasena": "juan123",
+    "telefono": "321435678",
+    "perfil": {
+        "id_perfil": "123",
+        "nombre": "Juan Taborda",
+        "edad": 21,
+        "foto": "Juan.png",
+        "favoritos": [{
+            "fav_peliculas": ["125", "124"],
+            "fav_series": ["123", "124"]
+        }],
+        "visualizacion_peliculas": [
+            {
+                "id_pelicula": "123",
+                "tiempo": 40
+            },
+            {
+                "id_pelicula": "125",
+                "tiempo": 80
+            }
+        ],
+        "visualizacion_series": [
+            {
+                "id_serie": "124",
+                "id_capitulo": "2",
+                "tiempo": 78
+            },
+            {
+                "id_serie": "125",
+                "id_capitulo": "1",
+                "tiempo": 32
+            }
+        ]
+    },
+    "metodo_pago": [
+        {
+        "nombre_tarjeta": "JuanCard",
+        "numero_tarjeta": "123456978",
+        "fecha-ven": "6-09-2027",
+        "cvv": 123      
+        }
+        ],
+    "ubicacion": {
+        "pais": "Colombia",
+        "zona": "Antioquia",
+        "ciudad": "Medellin"    
+    },
+    "suscripcion": {
+        "nombre": "Plan rico",
+        "duracion": 30,
+        "precio": 15000,
+        "fecha_inicio": "06-06-2022",
+        "fecha_ven": "06-07-2022"    
+    }  
+},
+{
+    "id": "124",
+    "nombre-usuario": "JuanaR",
+    "correo": "Juana@gmail.com",
+    "contrasena": "juana124",
+    "telefono": "3114567890",
+    "perfil": {
+        "id_perfil": "124",
+        "nombre": "Juana rodriguez",
+        "edad": 19,
+        "foto": "Juana.png",
+        "favoritos": [{
+            "fav_peliculas": ["125", "124"],
+            "fav_series": ["123"]
+        }],
+        "visualizacion_peliculas": [
+            {
+                "id_pelicula": "125",
+                "tiempo": 65
+            },
+            {
+                "id_pelicula": "123",
+                "tiempo": 35
+            }
+        ],
+        "visualizacion_series": [
+            {
+                "id_serie": "124",
+                "id_capitulo": "1",
+                "tiempo": 45
+            },
+            {
+                "id_serie": "123",
+                "id_capitulo": "2",
+                "tiempo": 23
+            }
+        ] 
+    },
+    "metodo_pago": [
+        {
+        "nombre_tarjeta": "JuanaCard",
+        "numero_tarjeta": "123567987",
+        "fecha-ven": "06-12-2024",
+        "cvv": 321      
+        }
+        ],
+    "ubicacion": {
+        "pais": "Colombia",
+        "zona": "Antioquia",
+        "ciudad": "Medellin"    
+    },
+    "suscripcion": {
+        "nombre": "Plan rico",
+        "duracion": 30,
+        "precio": 15000,
+        "fecha_inicio": "04-07-2022",
+        "fecha_ven": "04-08-2022"    
+    }  
+},
+{
+    "id": "125",
+    "nombre-usuario": "elisC",
+    "correo": "elias@gmail.com",
+    "contrasena": "elias125",
+    "telefono": "3235653234",
+    "perfil": {
+        "id_perfil": "125",
+        "nombre": "elias carmona",
+        "edad": 32,
+        "foto": "elias.png",
+        "favoritos": [{
+            "fav_peliculas": ["124"],
+            "fav_series": ["123", "124", "125"]
+        }],
+        "visualizacion_peliculas": [
+                {
+                    "id_pelicula": "124",
+                    "tiempo": 76
+                },
+                {
+                    "id_pelicula": "125",
+                    "tiempo": 12
+                }
+        ],
+        "visualizacion_series": [
+            {
+                "id_serie": "123",
+                "id_capitulo": "1",
+                "tiempo": 54
+            },
+            {
+                "id_serie": "125",
+                "id_capitulo": "2",
+                "tiempo": 12
+            } 
+        ]
+    },
+    "metodo_pago": [
+        {
+        "nombre_tarjeta": "eliasCard",
+        "numero_tarjeta": "123456432",
+        "fecha-ven": "04-05-2029",
+        "cvv": 445      
+        }
+        ],
+    "ubicacion": {
+        "pais": "Colombia",
+        "zona": "Antioquia",
+        "ciudad": "Medellin"    
+    },
+    "suscripcion": {
+        "nombre": "Plan pobre",
+        "duracion": 30,
+        "precio": 2000,
+        "fecha_inicio": "06-06-2022",
+        "fecha_ven": "06-07-2022"    
+    }  
+}
+])

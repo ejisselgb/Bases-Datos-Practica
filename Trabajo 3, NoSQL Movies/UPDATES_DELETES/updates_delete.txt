@@ -1,0 +1,8 @@
+/**UPDATE PARA ComentariosPeliculas**/
+db.COMENTARIOS_PELICULAS.update({"id_perfil": "123", "id_pelicula": "123"}, {$set: {"calificacion": 3}})
+db.COMENTARIOS_PELICULAS.update({"id_perfil": "124", "id_pelicula": "124"}, {$set: {"calificacion": 4}})
+db.COMENTARIOS_PELICULAS.update({"id_perfil": "125", "id_pelicula": "125"}, {$set: {"calificacion": 5}})
+
+/**DELETE PARA ComentariosSeries**/
+
+db.COMENTARIOS_SERIES.deleteOne({"calificacion": 4})

@@ -1,0 +1,162 @@
+db.SERIES.insertMany([{
+    "id_serie": "123",
+    "nombre": "Stranger things",
+    "fecha_publicacion": "2016-07-15",
+    "trailer": "www...",
+    "poster": "www...",
+    "descripcion": "description",
+    "categorias": [
+        "Acción",
+        "Ciencia ficción"
+    ],
+    "idiomas": [
+        "Español",
+        "Inglés"
+    ],
+    "autores": [
+        {
+            "nombre_autor": "Hermanos Duffer",
+            "fecha_nacimiento": "15-02-1984",
+            "experiencia": 15
+        }
+    ],
+    "actores": [
+        {
+            "nombre": "Johnny Depp",
+            "fecha_nacimiento": "1963-06-09"
+        },
+        {
+            "nombre": "Leonardo DiCaprio",
+            "fecha_nacimiento": "1974-11-11"
+        }
+    ],
+    "capitulos": [
+        {
+            "id_capitulo": "1",
+            "nombre_capitulo": "MADMAX",
+            "duracion": 48,
+            "descripcion": "A unos días de Halloween...",
+            "poster": "www..."
+        },
+        {
+            "id_capitulo": "2",
+            "nombre_capitulo": "Dulce o truco, bicho raro",
+            "duracion": 56,
+            "descripcion": "Will ve algo terrible en la noche...",
+            "poster": "www..."
+        }
+    ]
+},
+{
+    "id_serie": "124",
+    "nombre": "Breaking bad",
+    "fecha_publicacion": "2008-01-20",
+    "trailer": "www...",
+    "poster": "www...",
+    "descripcion": "description",
+    "categorias": [
+        "Acción",
+        "Ciencia ficción"
+    ],
+    "idiomas": [
+        "Español",
+        "Inglés"
+    ],
+    "autores": [
+        {
+            "nombre_autor": "Vince Gilligan",
+            "fecha_nacimiento": "10-02-1967",
+            "experiencia": 25
+        }
+    ],
+    "actores": [
+        {
+            "nombre": "Johnny Depp",
+            "fecha_nacimiento": "1963-06-09"
+        },
+        {
+            "nombre": "Leonardo DiCaprio",
+            "fecha_nacimiento": "1974-11-11"
+        }
+    ],
+    "capitulos": [
+        {
+            "id_capitulo": "1",
+            "nombre_capitulo": "El principio del fin",
+            "duracion": 58,
+            "descripcion": "Un profesor de física...",
+            "poster": "www..."
+        },
+        {
+            "id_capitulo": "2",
+            "nombre_capitulo": "El gato en la bolsa",
+            "duracion": 48,
+            "descripcion": "Luego del fracaso de su primer negocio...",
+            "poster": "www..."
+        }
+    ]
+},
+{
+    "id_serie": "125",
+    "nombre": "The walking dead",
+    "fecha_publicacion": "2008-10-31",
+    "trailer": "www...",
+    "poster": "www...",
+    "descripcion": "description",
+    "categorias": [
+        "Acción",
+        "Ciencia ficción"
+    ],
+    "idiomas": [
+        "Español",
+        "Inglés"
+    ],
+    "autores": [
+        {
+            "nombre_autor": "David Wiener",
+            "fecha_nacimiento": "20-02-1977",
+            "experiencia": 20
+        },
+        {
+            "nombre_autor": "Troy Miller",
+            "fecha_nacimiento": "1-05-1987",
+            "experiencia": 25
+        },
+        {
+            "nombre_autor": "Dave Erickson",
+            "fecha_nacimiento": "10-07-1957",
+            "experiencia": 35
+        }
+    ],
+    "actores": [
+        {
+            "nombre": "Johnny Depp",
+            "fecha_nacimiento": "1963-06-09"
+        },
+        {
+            "nombre": "Brad Pitt",
+            "fecha_nacimiento": "1963-12-18"
+        },
+        {
+            "nombre": "Leonardo DiCaprio",
+            "fecha_nacimiento": "1974-11-11"
+        }
+    ],
+    "capitulos": [
+        {
+            "id_capitulo": "1",
+            "nombre_capitulo": "Los viejos tiempos",
+            "duracion": 67,
+            "descripcion": "Rick busca a su familia...",
+            "poster": "www..."
+        },
+        {
+            "id_capitulo": "2",
+            "nombre_capitulo": "Agallas",
+            "duracion": 44,
+            "descripcion": "Sin saberlo, Rick provoca...",
+            "poster": "www..."
+        }
+    ]
+}
+])

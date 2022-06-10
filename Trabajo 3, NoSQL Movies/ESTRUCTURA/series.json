@@ -1,0 +1,23 @@
+{
+    "nombre": "string",
+    "fecha_publicacion": date,
+    "trailer": "string",
+    "poster": "string",
+    "descripcion": "string",
+    "categorias": ["string"],
+    "idiomas": ["string"],
+    "actores": [
+        {
+            "nombre": "string",
+            "fecha_nacimiento": date,           
+        }
+    ],
+    "capitulos": [
+        {
+            "nombre_capitulo": "string",
+            "duracion": int,
+            "descripcion": "string",
+            "poster": "string"
+        }
+    ]
+}

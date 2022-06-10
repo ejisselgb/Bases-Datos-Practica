@@ -1,0 +1,52 @@
+
+{
+    "nombre_usuario": "string",
+    "correo": "string",
+    "contrasena": "string",
+    "telefono": "string",
+    "perfil": {
+        "id_perfil": "String",
+        "nombre": "string",
+        "edad": int,
+        "foto": "string",
+        "favoritos": [{
+            "fav_peliculas": ["string"],
+            "fav_series": ["string"]
+        }],
+        "visualizacion_peliculas": [
+            {    
+                "id_pelicula": "string",
+                "tiempo": int
+            }
+        ],
+        "visualizacion_series": [
+            {
+                "id_serie": "string",
+                "id_capitulo": "string",
+                "tiempo": int
+            }
+        ]
+    },
+    "metodo_pago": [
+        {
+            "nombre_tarjeta": "string",
+            "numero_tarjeta": "string",
+            "fecha_ven": date,
+            "cvv": int 
+        }
+    ],
+    "ubicacion": 
+        {
+            "pais": "string",
+            "zona": "string",
+            "ciudad": "string"
+        },
+    "suscripcion": {
+            "nombre": "string",
+            "duracion": int,
+            "precio": int,
+            "fecha_inicio": date,
+            "fecha_vencimiento": date
+        }
+}
+

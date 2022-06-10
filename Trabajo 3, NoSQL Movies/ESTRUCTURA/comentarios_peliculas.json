@@ -1,0 +1,7 @@
+{
+    "id_perfil": "string",
+    "id_pelicula": "string",
+    "comentarios": "string",
+    "calificacion": int, 
+}
+

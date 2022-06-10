@@ -1,0 +1,37 @@
+db.COMENTARIOS_PELICULAS.insertMany([{
+    "id_perfil": "123",
+    "id_pelicula": "123",
+    "comentario": "Muy bueno, con arroz blanco",
+    "calificacion": 4
+},
+{
+    "id_perfil": "124",
+    "id_pelicula": "123",
+    "descripcion_comentario": "Muy bueno, con arroz blanco",
+    "calificacion": 5
+},
+{
+    "id_perfil": "123",
+    "id_pelicula": "124",
+    "descripcion_comentario": "Muy bueno, sin arroz blanco",
+    "calificacion": 5
+},
+{
+    "id_perfil": "124",
+    "id_pelicula": "124",
+    "descripcion_comentario": "Muy bueno, sin arroz blanco",
+    "calificacion": 5
+},
+{
+    "id_perfil": "125",
+    "id_pelicula": "125",
+    "descripcion_comentario": "No muy bueno, sin arroz blanco",
+    "calificacion": 3
+},
+{
+    "id_perfil": "123",
+    "id_pelicula": "125",
+    "descripcion_comentario": "Nada bueno, con arroz blanco",
+    "calificacion": 2
+}
+])

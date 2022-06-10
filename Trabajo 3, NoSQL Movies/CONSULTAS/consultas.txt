@@ -1,0 +1,36 @@
+/** CONSULTA PARA DETERMINAR SI LA FECHA DE ESTRENO DE UNA PELICULA ES MAYOR A 2017 (1)**/
+db.PELICULAS.find({"fecha_publicacion":{"$gt": "2017-01-01"}})
+
+/** CONSULTA PARA MOSTRAR LOS ACTORES DE UNA PELICULA Y BUSCAR SI ESTOS HAN TRABAJADO EN OTRAS (2) **/
+db.PELICULAS.find({"nombre": "El Irlandes"}).forEach(function(docComparar){
+    const actoresAcomp = docComparar.actores
+    const tituloComparar = docComparar.nombre
+    for(var i = 0; i < actoresAcomp.length;i++){
+        var actor =  actoresAcomp[i].nombre
+        var imprimir = actor+" trabajó en: "+tituloComparar
+        db.PELICULAS.find().forEach(function(doc){
+            var titulo = doc.nombre
+            var actores = doc.actores
+            if(titulo === tituloComparar){
+            }
+            else{
+                for(var j = 0; j<actores.length; j++){
+                    if(actor === actores[j].nombre){
+                        imprimir += ", "+titulo
+                    }
+                }
+            }
+
+        })
+        print(imprimir) 
+    }
+})
+
+/** CONSULTA PARA DETERMINAR SI LA CALIFICACION DE UNA PELICULA O SERIE ES MENOR O IGUAL A 3 (3)**/
+db.COMENTARIOS_PELICULAS.find({"calificacion": {"$lte":3}});
+db.COMENTARIOS_SERIES.find({"calificacion": {"$lte":3}});
+
+/** CONSULTA PARA DETERMINAR SI LA CALIFICACION DE UNA PELICULA O SERIE ES MAYOR A 3 (4)**/
+db.COMENTARIOS_PELICULAS.find({"calificacion": {"$gt": 3}});
+db.COMENTARIOS_SERIES.find({"calificacion": {"$gt": 3}});
+

@@ -1,0 +1,22 @@
+{
+    "nombre":  "string ",
+    "fecha_publicacion": date,
+    "trailer": "string",
+    "poster": "string",
+    "descripcion": "string",
+    "categorias": ["string"],
+    "idiomas": ["string"],
+    "autores": [
+        {
+            "nombre_autor": "string", 
+            "edad": int, 
+            "experiencia": int
+        }
+    ],
+    "actores": [
+        {
+            "nombre": "string",
+            "fecha_nacimiento": date           
+        }
+    ]
+}
