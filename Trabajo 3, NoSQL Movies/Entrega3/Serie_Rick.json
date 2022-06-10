@@ -1,0 +1,33 @@
+{
+    "id_serie": "666",
+    "nombre": "Rick and Morty",
+    "sinopsis": "Después de haber estado desaparecido durante casi 20 años, Rick Sánchez llega de imprevisto a la puerta de la casa de su hija Beth y se va a vivir con ella y su familia utilizando el garaje como su laboratorio personal.",
+    "fecha_lanzamiento": "2013-12-02",
+    "poster": "poster2.jpg",
+    "trailer": "https://www.youtube.com/watch?v=E8cXKMR9a1Q&ab_channel=JoyasDeLaAnimaci%C3%B3n",
+    "categorias": [
+        "Divertido",
+        "Caricatura",
+        "Aventura"
+    ],
+    "num_capitulos": 50,
+    "capitulos": [
+        {
+            "id_capitulo": "6661",
+            "temporada": 4,
+            "num_capitulo": 4,
+            "descripcion_capitulo": "En esta nueva temporada, Rick, un excéntrico científico, y Morty, su nieto, vivirán extrañas aventuras y viajes espaciales intergalácticos",
+            "duracion": "00:25:16",
+            "caratula": "caratuarym.jpg"
+        },
+        {
+            "id_capitulo": "6662",
+            "temporada": 1,
+            "num_capitulo": 5,
+            "descripcion_capitulo": "En este episodio de Rick y Morty, Rick resuelve los problemas de la familia y se adentra en aventura con Morty.",
+            "duracion": "00:25:16",
+            "caratula": "caratuarym.jpg"
+        }
+    ],
+    "calificacion": "3.5"
+}

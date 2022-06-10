@@ -1,0 +1,38 @@
+{
+    "id_usuario": "2",
+    "nombre": "María José González",
+    "nombre_usuario": "majogonzalez",
+    "correo": "majogonzalpel@gmail.com",
+    "contraseña": "holasoymajo20",
+    "telefono": "3206847658",
+    "pais": "Alemania",
+    "zona": "Baviera",
+    "ciudad": "Múnich",
+    "suscripcion": {
+        "id_suscripcion": "67890",
+        "fecha_vencimiento": "2021-10-15",
+        "estado": "Activa",
+        "plan": {
+            "id_plan": "09876",
+            "tipo": "Plus",
+            "precio": "$32.000"
+        }
+    },
+    "perfiles": [
+        {
+            "id_perfil": "4",
+            "nombre_perfil": "mojis",
+            "avatar": "imagen4.jpg"
+        },
+        {
+            "id_perfil": "5",
+            "nombre_perfil": "saris",
+            "avatar": "imagen5.jpg"
+        },
+        {
+            "id_perfil": "6",
+            "nombre_perfil": "Horus",
+            "avatar": "imagen6.jpg"
+        }
+    ]
+}

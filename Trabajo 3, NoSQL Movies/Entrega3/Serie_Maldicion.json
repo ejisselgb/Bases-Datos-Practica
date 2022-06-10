@@ -1,0 +1,33 @@
+{
+    "id_serie": "777",
+    "nombre": "La maldición de Hill House",
+    "sinopsis": "Hill House una mansión solitaria y de siniestra reputación. Montague decide alquilarla y busca ayudantes dispuestos a pasar una temporada en ella. El objetivo tomar notas de cualquier fenómeno paranormal que se presente para documentar el libro sobre casas encantadas que prepara el doctor.",
+    "fecha_lanzamiento": "2018-10-18",
+    "poster": "poster3.jpg",
+    "trailer": "https://www.youtube.com/watch?v=mTvNeafShH0&ab_channel=NetflixLatinoam%C3%A9rica",
+    "categorias": [
+        "Terror",
+        "Thriller",
+        "Suspenso"
+    ],
+    "num_capitulos": 10,
+    "capitulos": [
+        {
+            "id_capitulo": "7771",
+            "temporada": 1,
+            "num_capitulo": 7,
+            "descripcion_capitulo": "Cuando los Crane se reúnen para el último adiós, un flashback revela la conexión del señor Dudley con la casa, develándose un secreto tras una pared.",
+            "duracion": "01:58.01",
+            "caratula": "caratulamdh.jpg"
+        },
+        {
+            "id_capitulo": "7772",
+            "temporada": 1,
+            "num_capitulo": 3,
+            "descripcion_capitulo": "Theo, extremadamente sensible, se ve reflejada en una joven paciente con problemas que se siente amenazada por un espeluznante señor Sonrisas.",
+            "duracion": "00:55:47",
+            "caratula": "caratulamdh2.jpg"
+        }
+    ],
+    "calificacion": "2.9"
+}

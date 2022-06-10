@@ -1,0 +1,29 @@
+{
+    "id_pelicula": "111",
+    "nombre": "Kill Bill",
+    "sinopsis": "En Tokio, O-Ren Ishii está protegida por sus letales secuaces y dirige un enorme nightclub/restaurante, el House of Blue Leaves. Para asaltar este bastión, La Novia libra una encarnizada batalla de artes marciales contra cientos de los soldados enmascarados de O-Ren, su escuadrón personal, Los 88 Locos.",
+    "fecha_lanzamiento": "2003-11-14",
+    "poster": "imagen.jpg",
+    "trailer": "https://www.youtube.com/watch?v=7kSuas6mRpk&ab_channel=MovieclipsClassicTrailers",
+    "actores": [
+        "Uma Thurman",
+        "Lucy Liu",
+        "David Carradine",
+        "Michael Madsen",
+        "Vivica A. Fox",
+        "Daryl Hannah"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Español",
+        "Alemán",
+        "Frances"
+    ],
+    "duracion": "01:51:20",
+    "categorias": [
+        "Acción",
+        "Crimen",
+        "Artes marciales"
+    ],
+    "calificacion": "10"
+}

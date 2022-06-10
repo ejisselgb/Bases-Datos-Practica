@@ -1,0 +1,31 @@
+{
+    "id_pelicula": "333",
+    "nombre": "Harry Potter y el cáliz de fuego",
+    "sinopsis": "Hogwarts se prepara para el Torneo de los Tres Magos, en el que competirán tres escuelas de hechicería. Para sorpresa de todos, Harry Potter es elegido para participar en la competencia, en la que deberá luchar contra dragones, internarse en el agua y enfrentarse a sus mayores miedos.",
+    "fecha_lanzamiento": "2005-11-25",
+    "poster": "imagen3.jpg",
+    "trailer": "https://www.youtube.com/watch?v=wX5dWfUKGPg&ab_channel=HBOMaxLatinoam%C3%A9rica",
+    "actores": [
+        "Daniel Radcliffe",
+        "Emma Watson",
+        "Rupert Grint",
+        "Robert Patinson",
+        "Ralph Fiennes",
+        "Tom Felton",
+        "Adam Sandler"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Español",
+        "Ruso"
+    ],
+    "duración": "02:37:00",
+    "categorias": [
+        "Fantasía",
+        "Ficción",
+        "Aventura",
+        "Drama",
+        "Acción"
+    ],
+    "calificacion": "2.7"
+}

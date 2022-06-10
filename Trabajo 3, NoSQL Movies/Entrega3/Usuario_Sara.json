@@ -1,0 +1,38 @@
+{
+    "id_usuario": "1",
+    "nombre": "Sara Castrillón Ríos",
+    "nombre_usuario": "sara_castri",
+    "correo": "saris@gmail.com",
+    "contraseña": "hola123",
+    "telefono": "3221458695",
+    "pais": "Colombia",
+    "zona": "Antioquia",
+    "ciudad": "Medellín",
+    "suscripcion": {
+        "id_suscripcion": "12345",
+        "fecha_vencimiento": "2023-01-12",
+        "estado": "Activa",
+        "plan": {
+            "id_plan": "54321",
+            "tipo": "Básico",
+            "precio": "$16.000"
+        }
+    },
+    "perfiles": [
+        {
+            "id_perfil": "1",
+            "nombre_perfil": "Pepito",
+            "avatar": "imagen.jpg"
+        },
+        {
+            "id_perfil": "2",
+            "nombre_perfil": "Pepita",
+            "avatar": "imagen2.jpg"
+        },
+        {
+            "id_perfil": "3",
+            "nombre_perfil": "Erik4",
+            "avatar": "imagen3.jpg"
+        }
+    ]
+}

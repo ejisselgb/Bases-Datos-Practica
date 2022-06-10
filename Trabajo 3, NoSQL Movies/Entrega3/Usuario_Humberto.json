@@ -1,0 +1,38 @@
+{
+    "id_usuario": "3",
+    "nombre": "Humberto Carbonó Pedroza",
+    "nombre_usuario": "bertix",
+    "correo": "humbertoacpq@gmail.com",
+    "contraseña": "amomuchoagus",
+    "telefono": "3257891452",
+    "pais": "Autralia",
+    "zona": "Victoria",
+    "ciudad": "Melbourne",
+    "suscripcion": {
+        "id_suscripcion": "10234",
+        "fecha_vencimiento": "2021-05-08",
+        "estado": "Ináctivo",
+        "plan": {
+            "id_plan": "43201",
+            "tipo": "Élite",
+            "precio": "$64.000"
+        }
+    },
+    "perfiles": [
+        {
+            "id_perfil": "7",
+            "nombre_perfil": "bertolindo",
+            "avatar": "imagen7.jpg"
+        },
+        {
+            "id_perfil": "8",
+            "nombre_perfil": "gustavis",
+            "avatar": "imagen8.jpg"
+        },
+        {
+            "id_perfil": "9",
+            "nombre_perfil": "yune",
+            "avatar": "imagen9.jpg"
+        }
+    ]
+}

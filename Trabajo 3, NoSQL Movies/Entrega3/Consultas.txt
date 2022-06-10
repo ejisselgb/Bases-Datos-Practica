@@ -1,0 +1,11 @@
+---Seleccionar todas las películas que fueron estrenadas después del 2010
+db.Peliculas.find({"fecha_lanzamiento": {$gte: new Date("2010-01-01")}}).pretty()
+
+---Seleccionar los actores de solo una película, buscar y mostrar en que otras películas han trabajado esos actores
+db.Peliculas.find({"actores": {$in: db.Peliculas.distinct("actores", {"id_pelicula": "333"})}}).pretty()
+
+---Seleccionar los comentarios de una película que tengan calificación por debajo o iguales a 3
+db.Calificaciones.find({"id_pelicula": {$eq: "111"}, "calificacion": {$lte: 3}}).pretty()
+
+---Seleccionar los comentarios de una película que tengan una califiación por encima de 3
+db.Calificaciones.find({"id_pelicula": {$eq: "111"}, "calificacion": {$gt: 3}}).pretty()

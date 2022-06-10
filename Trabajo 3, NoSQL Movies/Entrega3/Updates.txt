@@ -1,0 +1,15 @@
+db.Peliculas.update({"id_pelicula": "111"}, {$set :{"fecha_lanzamiento": new Date("2003-11-14")}})
+
+db.Peliculas.update({"id_pelicula": "222"}, {$set :{"fecha_lanzamiento": new Date("2014-10-26")}})
+
+db.Peliculas.update({"id_pelicula": "333"}, {$set :{"fecha_lanzamiento": new Date("2005-11-25")}})
+
+db.Peliculas.update({"id_pelicula": "444"}, {$set :{"fecha_lanzamiento": new Date("2010-06-25")}})
+
+db.Peliculas.update({"id_pelicula": "111"}, {$set :{"calificacion":[{"id_perfil": "1", "comentario": "Muy buena peli,me gustó un montón.", calificacion: 5}, {"id_perfil": "3", "comentario": "Peye, muy aburrida.", calificacion: 1}, {"id_perfil": "7", "comentario": "Muy interesante, me gusta mucho.", calificacion: 5}, {"id_perfil": "8", "comentario": "Me la he visto muchas veces, siempre es super divertida.", calificacion: 4}]}})
+
+db.Peliculas.update({"id_pelicula": "222"}, {$set :{"calificacion": [{"id_perfil": "4", "comentario": "Aburridaaaaaaaaaaaaa...", calificacion: 0}, {"id_perfil": "9", "comentario": "Monótona y aburrida.", calificacion: 1}, {"id_perfil": "8", "comentario": "No me gustó para nada.", calificacion: 2}, {"id_perfil": "6", "comentario": "A pesar de todo, me gustan mucho estos actores.", calificacion: 3}]}})
+
+db.Peliculas.update({"id_pelicula": "333"}, {$set :{"calificacion": [{"id_perfil": "4", "comentario": "Creo que es una buena idea pero mal ejecutada.", calificacion: 2}, {"id_perfil": "5", "comentario": "No fue nuy impactante, es muy cliché.", calificacion: 3}, {"id_perfil": "7", "comentario": "Pésima actución, no me la terminé.", calificacion: 2}, {"id_perfil": "6", "comentario": "Soy adolescente, se me hizo súper bonita.", calificacion: 4}]}})
+
+db.Peliculas.update({"id_pelicula": "444"}, {$set :{"calificacion": [{"id_perfil": "1", "comentario": "La película me gusta mucho, es muy graciosa.", calificacion: 5}, {"id_perfil": "1", "comentario": "Que caja esos manes jajajajja.", calificacion: 4}, {"id_perfil": "7", "comentario": "Es súper grotesca, no la recomiendo para niños.", calificacion: 0}, {"id_perfil": "6", "comentario": "Me dió mucha risa, es de lo mejor que he visto.", calificacion: 5}]}})

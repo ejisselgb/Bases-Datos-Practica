@@ -1,0 +1,33 @@
+{
+    "id_serie": "555",
+    "nombre": "Breaking Bad",
+    "sinopsis": "Walter White es un frustrado profesor de química en un instituto, padre de un joven discapacitado y con una mujer embarazada. Además, trabaja en un lavadero de vehículos por las tardes. Cuando le diagnostican un cáncer pulmonar terminal se plantea qué pasará con su familia cuando él muera.",
+    "fecha_lanzamiento": "2008-01-20",
+    "poster": "poster1.jpg",
+    "trailer": "https://www.youtube.com/watch?v=HhesaQXLuRY",
+    "categorias": [
+        "Crimen",
+        "Suspenso",
+        "Tragedia"
+    ],
+    "num_capitulos": 100,
+    "capitulos": [
+        {
+            "id_capitulo": "5551",
+            "temporada": 2,
+            "num_capitulo": 5,
+            "descripcion_capitulo": "Hank sufre como consecuencia de su encuentro con Tuco. Jesse ofrece a sus colegas Combo, Badger y Skinny Pete trabajo distribuyendo la droga por las calles de la ciudad.",
+            "duracion": "00:59:23",
+            "caratula": "caratulaep5.jpg"
+        },
+        {
+            "id_capitulo": "5552",
+            "temporada": 1,
+            "num_capitulo": 3,
+            "descripcion_capitulo": "Tras la discusión con Jesse, Walter tiene que lidiar él solo con Krazy 8. Marie, por su parte, sospecha que Walt Jr. está consumiendo marihuana y le pide a Hank que hable con el chico para advertirle del peligro del consumo de drogas.",
+            "duracion": "01:03:23",
+            "caratula": "caratulaep3.jpg"
+        }
+    ],
+    "calificacion": "4.3"
+}

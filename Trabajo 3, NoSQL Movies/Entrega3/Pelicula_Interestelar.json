@@ -1,0 +1,28 @@
+{
+    "id_pelicula": "222",
+    "nombre": "Interestelar",
+    "sinopsis": "Un grupo de científicos y exploradores, encabezados por Cooper, se embarcan en un viaje espacial para encontrar un lugar con las condiciones necesarias para reemplazar a la Tierra y comenzar una nueva vida allí.",
+    "fecha_lanzamiento": "2014-10-26",
+    "poster": "imagen2.jpg",
+    "trailer": "https://www.youtube.com/watch?v=UoSSbmD9vqc&ab_channel=WarnerBros.PicturesEspa%C3%B1a",
+    "actores": [
+        "Matthew McConaughe",
+        "Anne Hathaway",
+        "Jessica Chastain",
+        "Mackenzie Foy",
+        "Michael Clain",
+        "Timothee Chalamet"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Español",
+        "Portugués"
+    ],
+    "duracion": "02:49:05",
+    "categorias": [
+        "Drama",
+        "Ciencia ficción",
+        "Aventura"
+    ],
+    "calificacion": "4.8"
+}

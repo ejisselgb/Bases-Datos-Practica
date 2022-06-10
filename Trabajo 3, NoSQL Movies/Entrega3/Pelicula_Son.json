@@ -1,0 +1,29 @@
+{
+    "id_pelicula": "444",
+    "nombre": "Son como niños",
+    "sinopsis": "La muerte de su entrenador de baloncesto durante su infancia provoca la reunión de algunos viejos amigos, quienes se ven en el lugar en el que celebraron un campeonato años atrás. Los compañeros hablan sobre sus esposas y sus hijos, y descubren que la edad no necesariamente va de la mano con la madurez.",
+    "fecha_lanzamiento": "2010-06-25",
+    "poster": "imagen4.jpg",
+    "trailer": "https://www.youtube.com/watch?v=FSAMw7m9QRA&ab_channel=SonyPicturesM%C3%A9xico",
+    "actores": [
+        "Adam Sandler",
+        "Kevin James",
+        "Chris Rock",
+        "David Spade",
+        "Rob Schneider",
+        "Salma Hayek",
+        "Maya Rudolph",
+        "Maria Bello"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Español"
+    ],
+    "duración": "01:42:23",
+    "categorias": [
+        "Comedia",
+        "Aventura",
+        "Familiar"
+    ],
+    "calificacion": "1.2"
+}
