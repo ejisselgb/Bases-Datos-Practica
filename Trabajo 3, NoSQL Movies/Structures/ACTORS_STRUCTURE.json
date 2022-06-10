@@ -1,0 +1,17 @@
+[
+    {
+        "movie_id": {"$ref": "string","$id": {"$oid": "id"}},
+        "name": "string",
+        "surname": "string"
+    },
+    {
+        "movie_id": {"$ref": "string","$id": {"$oid": "id"}},
+        "name": "string",
+        "surname": "string"
+    },
+    {
+        "movie_id": {"$ref": "string","$id": {"$oid": "id"}},
+        "name": "string",
+        "surname": "string"
+    }
+]

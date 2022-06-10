@@ -1,0 +1,17 @@
+[
+    {
+        "name": "string",
+        "screens": "int",
+        "price": "int"
+    },
+    {
+      "name": "string",
+      "screens": "int",
+      "price": "int"
+    },
+    {
+        "name": "string",
+        "screens": "int",
+        "price": "int"
+    }
+]

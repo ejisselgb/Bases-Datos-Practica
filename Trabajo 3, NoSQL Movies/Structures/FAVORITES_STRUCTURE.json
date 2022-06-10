@@ -1,0 +1,14 @@
+[
+    {
+        "user_id": {"$ref": "string","$id": {"$oid": "id"}},
+        "movie_id": {"$ref": "string","$id": {"$oid": "id"}}
+    },
+    {
+        "user_id": {"$ref": "string","$id": {"$oid": "id"}},
+        "movie_id": {"$ref": "string","$id": {"$oid": "id"}}
+    },
+    {
+        "user_id": {"$ref": "string","$id": {"$oid": "id"}},
+        "movie_id": {"$ref": "string","$id": {"$oid": "id"}}
+    }
+]

@@ -1,0 +1,26 @@
+{
+    "title":"string",
+    "synopsis":"string",
+    "director":"string",
+    "premiere":"int",
+    "poster_url":"string",
+    "trailer_url":"string",
+    "movies_categories":
+    [
+        {"name_category":"string"},
+        {"name_category":"string"},
+        {"name_category":"string"}
+    ],
+    "movies_lenguages":
+    [
+        {"name":"string"},
+        {"name":"string"},
+        {"name":"string"}
+    ],
+    "movies_rating":
+    [
+        {"id_user":"ObjectTd","movierating":"int","comment":"sting"},
+        {"id_user":"ObjectTd","movierating":"int","comment":"sting"},
+        {"id_user":"ObjectTd","movierating":"int","comment":"sting"}
+    ]
+}

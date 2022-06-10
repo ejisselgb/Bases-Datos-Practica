@@ -1,0 +1,64 @@
+[
+  {
+    "_id": ObjectId("62a0ffbe04c38e7533a7e029"),
+    "username": "DanielKirchoff",
+    "email": "danielroldan123@yahoo.es",
+    "password": "165684",
+    "name": {
+      "given": "Daniel",
+      "family": "Roldan"
+    },
+    "location": {
+      "city": "Tamesis",
+      "zone": "Antioquia",
+      "country": "CO"
+    },
+    "plan": {
+      "$ref": "PLANS",
+      "$id": ObjectId("62a0eab404c38e7533a7e016")
+    },
+    "phone": "1234567892"
+  },
+
+  {
+    "_id": ObjectId("62a1000404c38e7533a7e02b"),
+    "username": "xxXAlejandroXxx",
+    "email": "alejandro.correa50@hotmail.com",
+    "password": "<5sfad654as1!",
+    "name": {
+      "given": "Alejandro",
+      "family": "Correa"
+    },
+    "location": {
+      "city": "Bogota",
+      "zone": "Cundinamarca",
+      "country": "CO"
+    },
+    "plan": {
+      "$ref": "PLANS",
+      "$id": ObjectId("62a0eacf04c38e7533a7e018")
+    },
+    "phone": "1234567891"
+  },
+
+  {
+    "_id": ObjectId("62a100ef04c38e7533a7e02d"),
+    "username": "CamilaZzz",
+    "email": "camijime23@gmail.com",
+    "password": "qleccstv15!23#",
+    "name": {
+      "given": "Camila",
+      "family": "Jimenez"
+    },
+    "location": {
+      "city": "Villavicencio",
+      "zone": "Meta",
+      "country": "CO"
+    },
+    "plan": {
+      "$ref": "PLANS",
+      "$id": ObjectId("62a0eae204c38e7533a7e01a"),
+    },
+    "phone": "1234567893"
+  }
+]

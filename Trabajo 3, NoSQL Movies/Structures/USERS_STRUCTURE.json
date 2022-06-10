@@ -1,0 +1,29 @@
+[
+  {
+    "username": "string",
+    "email": "string",
+    "password": "string",
+    "name": {"given": "string","family": "string"},
+    "location": {"city": "string","zone": "string","country": "string"},
+    "plan": {"$ref": "string","$id": {"$oid": "id"}},
+    "phone": "string"
+  },
+  {
+    "username": "string",
+    "email": "string",
+    "password": "string",
+    "name": {"given": "string","family": "string"},
+    "location": {"city": "string","zone": "string","country": "string"},
+    "plan": {"$ref": "string","$id": {"$oid": "id"}},
+    "phone": "string"
+  },
+  {
+    "username": "string",
+    "email": "string",
+    "password": "string",
+    "name": {"given": "string","family": "string"},
+    "location": {"city": "string","zone": "string","country": "string"},
+    "plan": {"$ref": "string","$id": {"$oid": "id"}},
+    "phone": "string"
+  }
+]

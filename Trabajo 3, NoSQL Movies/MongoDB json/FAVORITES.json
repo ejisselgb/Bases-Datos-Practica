@@ -1,0 +1,99 @@
+[
+    {
+        "_id": ObjectId("62a29b5677931ec0cd6714b8"),
+        "user_id": {
+            "$ref": "USERS",
+            "$id": ObjectId("62a0ffbe04c38e7533a7e029")
+        },
+        "movie_id": {
+            "$ref": "MOVIES",
+            "$id": ObjectId("62a259ca9d352e40dff2d1f3")
+        }
+
+    },
+    {
+        "_id": ObjectId("62a29b5677931ec0cd6714b9"),
+        "user_id": {
+            "$ref": "USERS",
+            "$id": ObjectId("62a0ffbe04c38e7533a7e029")
+        },
+        "movie_id": {
+            "$ref": "MOVIES",
+            "$id": ObjectId("62a259ca9d352e40dff2d1f5")
+        }
+
+    },
+    {
+        "_id": ObjectId("62a29b5677931ec0cd6714ba"),
+        "user_id": {
+            "$ref": "USERS",
+            "$id": ObjectId("62a1000404c38e7533a7e02b")
+        },
+        "movie_id": {
+            "$ref": "MOVIES",
+            "$id": ObjectId("62a259ca9d352e40dff2d1f3")
+        }
+
+    },
+    {
+        "_id": ObjectId("62a29b5677931ec0cd6714bb"),
+        "user_id": {
+            "$ref": "USERS",
+            "$id": ObjectId("62a1000404c38e7533a7e02b")
+        },
+        "movie_id": {
+            "$ref": "MOVIES",
+            "$id": ObjectId("62a259ca9d352e40dff2d1f4")
+        }
+
+    },
+    {
+        "_id": ObjectId("62a29b5677931ec0cd6714bc"),
+        "user_id": {
+            "$ref": "USERS",
+            "$id": ObjectId("62a1000404c38e7533a7e02b")
+        },
+        "movie_id": {
+            "$ref": "MOVIES",
+            "$id": ObjectId("62a259ca9d352e40dff2d1f5")
+        }
+
+    },
+    {
+        "_id": ObjectId("62a29b5677931ec0cd6714bd"),
+        "user_id": {
+            "$ref": "USERS",
+            "$id": ObjectId("62a100ef04c38e7533a7e02d")
+        },
+        "movie_id": {
+            "$ref": "MOVIES",
+            "$id": ObjectId("62a259ca9d352e40dff2d1f3")
+        }
+
+    },
+    {
+        "_id": ObjectId("62a29b5677931ec0cd6714be"),
+        "user_id": {
+            "$ref": "USERS",
+            "$id": ObjectId("62a100ef04c38e7533a7e02d")
+        },
+        "movie_id": {
+            "$ref": "MOVIES",
+            "$id": ObjectId("62a259ca9d352e40dff2d1f4")
+        }
+
+    },
+    {
+        "_id": ObjectId("62a29b5677931ec0cd6714bf"),
+        "user_id": {
+            "$ref": "USERS",
+            "$id": ObjectId("62a100ef04c38e7533a7e02d")
+        },
+        "movie_id": {
+            "$ref": "MOVIES",
+            "$id": ObjectId("62a259ca9d352e40dff2d1f5")
+        }
+
+    } 
+
+]

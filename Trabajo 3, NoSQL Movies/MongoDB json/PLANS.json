@@ -1,0 +1,20 @@
+[
+    {
+        "_id": ObjectId("62a0eab404c38e7533a7e016"),
+        "name": "Basic",
+        "screens": 1,
+        "price": 4
+    },
+    {
+        "_id": ObjectId("62a0eacf04c38e7533a7e018"),
+        "name": "Standard",
+        "screens": 3,
+        "price": 6
+    },
+    {
+        "_id": ObjectId("62a0eae204c38e7533a7e01a"),
+        "name": "Premium",
+        "screens": 4,
+        "price": 9
+    }
+]

@@ -1,0 +1,22 @@
+- Seleccionar todas las películas que fueron estrenadas después del 2017
+
+   db.MOVIES.find().forEach(movie => movie.premiere > 2017 ? print("Movie title: " + movie.title + "\nPremiere year: " + movie.premiere + "\n ") : movie)  
+
+
+- Seleccionar los actores de solo una película, buscar y mostrar en que otras películas han trabajado esos autores
+
+    Se guardan los actores en un array:
+        var x = db.ACTORS.find().toArray()
+
+    Se compara con la pelicula que queremos analizar:
+        db.ACTORS.find({movie_id: DBRef("MOVIES",ObjectId("62a259ca9d352e40dff2d1f3"))}, {_id: 0, name: 1, surname: 1}).forEach(actor => x.forEach(actual => {if(actual.movie_id != DBRef("MOVIES", ObjectId("62a259ca9d352e40dff2d1f3"))){if(actual.name == actor.name && actual.surname == actor.surname){ print(`Name: ${actual.name} ${actual.surname} \nMovie id: ${actual.movie_id} \n `) }  }  }  )  )
+
+
+- Seleccionar los comentarios de una película que tengan calificación por debajo o iguale a 3
+
+    db.MOVIES.find().forEach(movie => movie.movies_rating.forEach(comment => { if (comment.movierating <= 3) { print(`User id: ${comment.id_user} \nRating: ${comment.movierating} \nComment: ${comment.comment} \n `) } }))
+
+
+- Seleccionar los comentarios de una película que tengan una califiación por encima de 3
+
+    db.MOVIES.find().forEach(movie => movie.movies_rating.forEach(comment => { if (comment.movierating > 3) { print(`User id: ${comment.id_user} \nRating: ${comment.movierating} \nComment: ${comment.comment} \n `) } }))

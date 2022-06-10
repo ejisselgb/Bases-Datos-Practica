@@ -1,0 +1,75 @@
+[
+    {
+        "_id": ObjectId("62a259ca9d352e40dff2d1f3"),
+        "title":"Yes man",
+        "synopsis":"After a bitter divorce; a loan officer falls under the sway of a self-help guru who urges him to say yes to everything that comes his way for a year.",
+        "director":"Peyton Reed",
+        "premiere":2018,
+        "poster_url":"https://pics.filmaffinity.com/Di_que_s-597620171-large.jpg",
+        "trailer_url":"https://www.youtube.com/watch?v=dDh1l3qVNoY",
+        "movies_categories":
+        [
+            {"name_category":"Romantic comedies"},
+            {"name_category":"Movies based on books"},
+            {"name_category":"Comedies"}
+        ],
+        "movies_lenguages":
+        [
+            {"name":"Spanish"},
+            {"name":"English"}
+        ],
+        "movies_rating":
+        [
+            {"id_user":"62a0ffbe04c38e7533a7e029","movierating":3,"comment":"Mmmm no to funny for me"},
+            {"id_user":"62a1000404c38e7533a7e02b","movierating":4,"comment":"I like it"},
+            {"id_user":"62a100ef04c38e7533a7e02d","movierating":5,"comment":"I really love it my God"}
+        ]
+    },
+    {
+        "_id": ObjectId("62a259ca9d352e40dff2d1f4"),
+        "title":"Ted",
+        "synopsis":"A hard-party; foul-mouthed teddy bear come to life threatens to derail his human companions attempts to enter adulthood and marry his girlfriend.",
+        "director":"Seth MacFarlane",
+        "premiere":2012,
+        "poster_url":"https://es.web.img3.acsta.net/pictures/15/06/03/11/09/010870.jpg",
+        "trailer_url":"https://www.youtube.com/watch?v=9fbo_pQvU7M",
+        "movies_categories":
+        [
+            {"name_category":"Comedies"}
+        ],
+        "movies_lenguages":
+        [
+            {"name":"Spanish"},
+            {"name":"English"}
+        ],
+        "movies_rating":
+        [
+            {"id_user":"62a0ffbe04c38e7533a7e029","movierating":3,"comment":"Funny but fanciful"},
+            {"id_user":"62a1000404c38e7533a7e02b","movierating":5,"comment":"I love Ted, that bear is so rude but so cute"},
+            {"id_user":"62a100ef04c38e7533a7e02d","movierating":4,"comment":"Niceee"}
+        ]
+    },
+    {
+        "_id": ObjectId("62a259ca9d352e40dff2d1f5"),
+        "title":"Grown ups",
+        "synopsis":"Mourning the loss of their beloved junior high basketball coach; five middle-aged pals reunite at a lake house and rediscover the joys of beging a kid.",
+        "director":"Dennis Dugan",
+        "premiere":2010,
+        "poster_url":"https://images-na.ssl-images-amazon.com/images/S/pv-target-images/8cc65b37e1c6a637d213a6e784f6400e1e991aa3cf3564322050ceaba2aafa2a._RI_V_TTW_.jpg",
+        "trailer_url":"https://www.youtube.com/watch?v=e01NVCveGkg",
+        "movies_categories":
+        [
+            {"name_category":"Comedies"}
+        ],
+        "movies_lenguages":
+        [
+            {"name":"Spanish"},
+            {"name":"English"}
+        ],
+        "movies_rating":
+        [
+            {"id_user":"62a0ffbe04c38e7533a7e029","movierating":2,"comment":"Didn't like it at all"},
+            {"id_user":"62a1000404c38e7533a7e02b","movierating":1,"comment":"Too bad"}
+        ]
+    }
+]
