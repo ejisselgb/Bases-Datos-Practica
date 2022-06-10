@@ -1,0 +1,19 @@
+{
+    "TableName": "RATING_SERIES",
+    "KeySchema": [
+        {
+            "AttributeName": "comment_id",
+            "KeyType": "HASH"
+        }
+    ],
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "comment_id",
+            "AttributeType": "S"
+        }
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 1
+    }
+}
