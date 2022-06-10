@@ -1,0 +1,821 @@
+
+
+
+db.Categorias.insert({"nombre_categoria":"Mi lista"})
+db.Categorias.insert({"nombre_categoria":"Tendencia"})
+db.Categorias.insert({"nombre_categoria":"Top10 Colombia"})
+db.Categorias.insert({"nombre_categoria":"Nuevos Lanzamientos"})
+db.Categorias.insert({"nombre_categoria":"Comedias Romanticas"})
+db.Categorias.insert({"nombre_categoria":"Terror"})
+db.Categorias.insert({"nombre_categoria":"Dramas"})
+db.Categorias.insert({"nombre_categoria":"Accion"})
+db.Categorias.insert({"nombre_categoria":"Comedia"})
+db.Categorias.insert({"nombre_categoria":"Romance"})
+
+Peliculas---------------------------------------------------------------------------------
+
+db.Peliculas.insert({
+  "_id":"PE01",
+  "nombre_pelicula": "Shrek 2",
+  "duracion_pelicula": "01:59:24",
+  "miniatura_pelicula": "https://www.movieseafit.com/Shrek-2/SHREK2.jpg",
+  "restriccion_edad_pelicula": "ALL",
+  "trailer_pelicula": "https://youtu.be/xBxVgh-kgAI",
+  "enlace_pelicula": "https://www.movieseafit.com/Shrek-2/TrKFWR3%2b0kKf6pFRqswKWw%3d%3d",
+  "ano_estreno_pelicula": 2001,
+  "sinopsis_pelicula": "Cuando Shrek y la princesa Fiona regresan de su luna de miel, los padres de ella los invitan a visitar el reino de Muy Muy Lejano para celebrar la boda. Para Shrek, al que nunca abandona su fiel amigo Asno, esto constituye un gran problema. Los padres de Fiona, por su parte, no esperaban que su yerno tuviera un aspecto semejante y, mucho menos, que su hija hubiera cambiado tanto. Todo esto trastoca los planes del rey respecto al futuro del reino. Pero entonces entran en escena la maquiavélica Hada Madrina, su arrogante hijo el Príncipe Encantador y un minino muy especial: el Gato con Botas, experto cazador de ogros.",
+  "calificacion":"5",
+
+  "id_categorias": [
+	{"id_cat1":"CAT01"},
+	{"id_cat2":"CAT02"},
+	{"id_cat3":"CAT03"},
+	{"id_cat4":"CAT04"} ],
+
+    "actores":[
+        {"nombre_actor": "Shrek"},
+        {"nombre_actor": "Gato con botas"}
+    ],
+
+    "idiomas":[
+        {"descricpion": "Espanol"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ],
+
+    "comentarios": [
+        {"id_perfil":"PF001" , "nombre_perfil":"valen","nombre_pelicula":"Shrek 2","comentario": "Me encanto, lo tiene todo, excelente trama y muyyy entretenida.", "calificacion_com": 5},
+        {"id_perfil":"PF008" , "nombre_perfil":"loveryan","nombre_pelicula":"Shrek 2","comentario": "Pienso que sigue siendo la mejor de toda la saga definitivamente. Pero la animacion de la ultima es superior ", "calificacion_com": 4},
+        {"id_perfil":"PF010" , "nombre_perfil":"pepepe10", "nombre_pelicula":"Shrek 2", "comentario": "soy hater ", "calificacion_com": 2}
+    ]
+
+})
+
+db.Peliculas.insert(
+{
+    "_id": "PE02",
+
+    "nombre_pelicula": "Sword Art Online : Ordinal Scale",
+    "duracion_pelicula": "02:30:00",
+    "miniatura_pelicula": "https://www.movieseafit.com/Sword-Art-Online-Ordinal-Scale/SAO-OS.jpg",
+    "restriccion_edad_pelicula": "+7",
+    "trailer_pelicula": "https://youtu.be/VNxxReVeVDI",
+    "enlace_pelicula": "https://www.movieseafit.com/Sword-Art-Online-Ordinal-Scale/8LniDTd1X06M0lAoaOVl1A%3d%3d",
+    "ano_estreno_pelicula": 2019,
+    "sinopsis_pelicula": "En 2026, una nueva máquina llamada Augma se desarrolla para competir contra el NerveGear y su sucesor, el Amusphere. Un dispositivo portátile de próxima generación, el Augma no tiene una función de inmersiva completa como sus predecesores. En su lugar, utiliza Realidad Aumentada (AR) para introducir a los jugadores en el juego. Es seguro, fácil de usar y permite que los usuarios jueguen mientras están conscientes, lo que lo convierte en un éxito instantáneo en el mercado. El juego más popular en el sistema es 'Ordinal Scale' (OS), un ARMMORPG desarrollado exclusivamente para el Augma. Asuna y la banda ya han estado tocando OS por un tiempo, y pronto Kirito decide unirse a ellos. Sin embargo, están a punto de descubrir que Ordinal Scale no es todo diversión y juegos.",
+    "calificacion": 4.8,
+
+    "id_categorias": [
+        {"id_cat":"CAT01"},
+        {"id_cat":"CAT04"},
+        {"id_cat":"CAT08"},
+        {"id_cat":"CAT09"},
+        {"id_cat":"CAT12"}
+    ],
+
+    "actores":[
+        {"nombre_actor": "Kazuto Kirigaya"},
+        {"nombre_actor": "Asuna Yuuki"}
+    ],
+
+    "idiomas":[
+        {"descripcion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ],
+
+    "comentarios": [
+        {"id_perfil":"PF001" , "nombre_perfil":"valen", "nombre_pelicula":"Sword Art Online : Ordinal Scale", "comentario": "Soy SAO hater (Mis papas no me quieren).", "calificacion_com": 2},
+        {"id_perfil":"PF003" , "nombre_perfil":"lauraos", "nombre_pelicula":"Sword Art Online : Ordinal Scale","comentario": "A mí tampoco", "calificacion_com": 2},
+        {"id_perfil":"PF005" , "nombre_perfil":"xiovipa21", "nombre_pelicula":"Sword Art Online : Ordinal Scale","comentario": "Definitivamente SAO es de lo mejorcito que ha animado A-1, toda una experiencia increíblemente emotiva y épica.", "calificacion_com": 4}
+    ]
+
+} 
+)
+
+db.Peliculas.insert(
+{
+    "_id": "PE03",
+
+    "nombre_pelicula": "Fate Stay Night: Heavens Feel",
+    "duracion_pelicula": "02:55:30",
+    "miniatura_pelicula": "https://www.movieseafit.com/Fate-Stay-Night-Heavens-Feel/FSN-HF.jpg",
+    "restriccion_edad_pelicula": "+18",
+    "trailer_pelicula": "https://youtu.be/r_sf0-o9tS0",
+    "enlace_pelicula": "https://www.movieseafit.com/Fate-Stay-Night-Heavens-Feel/14BalPUyUkKKHO4JiivU0A%3d%3d",
+    "ano_estreno_pelicula": 2017,
+    "sinopsis_pelicula": "Una Guerra del Santo Grial como nunca ha habido antes está a punto de comenzar. Sakura Matou acude cada día a la residencia de los Emiya, albergando el sueño de poder vivir plácida y pacíficamente junto a Shiro, único miembro de dicha familia. Sin embargo, se encuentran en los albores de la contienda… Se abre el telón por última vez! Comienza la mayor Guerra del Santo Grial conocida hasta ahora…! La última y definitiva ruta, la de Sakura, comienza por fin! Se abre aquí el telón de la verdadera Guerra del Santo Grial!",
+    "calificacion": 4,
+
+    "id_categorias":[
+        {"id_cat":"CAT01"},
+        {"id_cat":"CAT04"},
+        {"id_cat":"CAT08"},
+        {"id_cat":"CAT12"}
+    ],
+
+    "actores":[
+        {"nombre_actor": "Emiya Shirou"},
+        {"nombre_actor": "Arturia Pendragon"}
+    ],
+
+    "idiomas":[
+        {"descripcion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ],
+
+    "comentarios": [
+        {"id_perfil":"PF006" , "nombre_perfil":"sinb", "nombre_pelicula":"Fate Stay Night: Heavens Feel","comentario": "Estuvo increíble, pero el final estuvo algo confuso.", "calificacion_com": 4.4},
+        {"id_perfil":"PF004" , "nombre_perfil":"marta20", "nombre_pelicula":"Fate Stay Night: Heavens Feel","comentario": "Una de las mejores obras animadas jamás creadas sin duda alguna", "calificacion_com": 4.6},
+        {"id_perfil":"PF009" , "nombre_perfil":"hyolyn", "nombre_pelicula":"Fate Stay Night: Heavens Feel","comentario": "Simplemente increíble...", "calificacion_com": 4},
+        {"id_perfil":"PF007" , "nombre_perfil":"gfriend", "nombre_pelicula":"Fate Stay Night: Heavens Feel","comentario": "Soy Fate hater.", "calificacion_com": 2},
+        {"id_perfil":"PF010" , "nombre_perfil":"pepepe10", "nombre_pelicula":"Fate Stay Night: Heavens Feel","comentario": "Sin palabras, definitivamente una obra de arte en su máxima expresión", "calificacion_com": 4}
+    ]
+}
+)
+
+db.Peliculas.insert(
+{
+    "_id": "PE04",
+
+    "nombre_pelicula": "Fate/kaleid liner Prisma Illya: Vow in the Snow",
+    "duracion_pelicula": "01:29:00",
+    "miniatura_pelicula": "https://www.movieseafit.com/Fate-kaleid-liner-Prisma-Illya-Vow-in-the-Snow/FKPI.jpg",
+    "restriccion_edad_pelicula": "+13",
+    "trailer_pelicula": "https://www.youtube.com/embed/-CWTJv1uulg?enablejsapi=1&wmode=opaque&autoplay=1",
+    "enlace_pelicula": "https://www.movieseafit.com/Fate-kaleid-liner-Prisma-Illya-Vow-in-the-Snow/9X6YDUQRR02PZ%2fT5IfuG0g%3d%3d",
+    "ano_estreno_pelicula": 2018,
+    "sinopsis_pelicula": "La historia original se desarrolla en un universo alternativo de Fate/Stay Night, una chica joven de dinero, vive con dos criadas y su medio hermano, Shiro Emiya. Las cosas se complican cuando Rin Tohsaka y Luviagelita Edelfelt llegan a su vida. Fue entonces cuando Illya se encuentra con una varita mágica que le permite convertirse en una Mahou Shojo (Chica Mágica). Su misión ahora; Recoger misteriosas cartas esparcidas en todo Japón por ordenes de Zelretch.",
+    "calificacion": 4.0,
+
+    "id_categorias":[
+        {"id_cat":"CAT01"},
+        {"id_cat":"CAT04"},
+        {"id_cat":"CAT08"},
+        {"id_cat":"CAT05"}
+    ],
+
+    "actores":[
+        {"nombre_actor": "Emiya Shirou"},
+        {"nombre_actor": "Miyu Edelfelt"}
+    ],
+
+    "idiomas":[
+        {"descripcion": "Japones"},
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ],
+    
+    "comentarios": [
+        {"id_perfil":"PF004" , "nombre_perfil":"marta20", "nombre_pelicula":"Fate/kaleid liner Prisma Illya: Vow in the Snow","comentario": "No me gusto mucho. No adaptaron bien el manga.", "calificacion_com": 2},
+        {"id_perfil":"PF002" , "nombre_perfil":"shiki.kun", "nombre_pelicula":"Fate/kaleid liner Prisma Illya: Vow in the Snow","comentario": "Estuvo buena la pelicula, pero le falto un poco en la animacion.", "calificacion_com": 4},
+        {"id_perfil":"PF001" , "nombre_perfil":"valen", "nombre_pelicula":"Fate/kaleid liner Prisma Illya: Vow in the Snow","comentario": "Me encanto, definitivamente el mejor Shirou de todos.", "calificacion_com": 5},
+    ]
+}
+)
+
+db.Peliculas.insert(
+{
+    "_id": "PE05",
+    
+    "nombre_pelicula": "Sword Art Online Progressive: Aria de una Noche sin estrellas",
+    "duracion_pelicula": "01:37:00",
+    "miniatura_pelicula": "https://www.movieseafit.com/Sword-Art-Online-Progressive-Aria-de-una-Noche-sin-estrellas/SAO-PROG.jpg",
+    "restriccion_edad_pelicula": "+13",
+    "trailer_pelicula": "https://www.youtube.com/watch?v=uJu_t-flsiM",
+    "enlace_pelicula": "https://www.movieseafit.com/Sword-Art-Online-Progressive-Aria-de-una-Noche-sin-estrellas/YV0RmLRrwE2oau+PeZuOEg==",
+    "ano_estreno_pelicula": 2021,
+    "sinopsis_pelicula": "La estudiante de secundaria Asuna lucha por sobrevivir con un joven espadachín después de que se revela que está atrapada dentro del juego de Sword Art Online, donde si tu HP cae a cero, tu cerebro será destruido en la vida real.",
+    "calificacion": 4.9,
+    
+    "id_categorias": [
+        {"id_cat":"CAT01"},
+        {"id_cat":"CAT04"},
+        {"id_cat":"CAT08"},
+        {"id_cat":"CAT09"},
+        {"id_cat":"CAT10"}
+    ],
+    
+    "actores":[
+        {"nombre_actor": "Kazuto Kirigaya"},
+        {"nombre_actor": "Asuna Yuuki"},
+        {"nombre_actor": "Misumi Tozawa"}
+    ],
+    
+    "idiomas":[
+        {"descripcion": "Japones"},
+        {"descripcion": "Ingles"},
+        {"descripcion": "Español"}
+    ],
+    
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ],
+
+    "comentarios": [
+        {"id_perfil":"PF008" , "nombre_perfil":"loveryan", "nombre_pelicula":"Sword Art Online Progressive: Aria de una Noche sin estrellas","comentario": "Estuvo increíble. La dinamicidad de las batallas y la introducción de Mito fueron excelentes.", "calificacion_com": 4},
+        {"id_perfil":"PF002" , "nombre_perfil":"valen", "nombre_pelicula":"Sword Art Online Progressive: Aria de una Noche sin estrellas","comentario": "Es lo mismo que en la primera temporada, soy wn.", "calificacion_com": 2},
+        {"id_perfil":"PF007" , "nombre_perfil":"sinb", "nombre_pelicula":"Sword Art Online Progressive: Aria de una Noche sin estrellas","comentario": "Estuvo bastante bien la pelicula, pero me hubiera gustado que cubriera mas pisos de Aincrad, no solo el primero.", "calificacion_com": 4},
+    ]
+} 
+)
+
+
+
+
+
+
+db.Series.insert(
+{
+    "_id": "SE01",
+    "nombre_series": "Horimiya",
+    "cantidad_capitulos": "13",
+    "miniatura_serie": "https://pics.filmaffinity.com/horimiya_hori_san_to_miyamura_kun-449536772-large.jpg",
+    "restriccion_edad_serie": "+12",
+    "trailer_serie": "https://youtu.be/CNs2IZQZcyI",
+    "enlace_serie": "https://www.movieseafit.com/Horimiya/zJNGQSmCD0OX%2f%2f59nA9PTA%3d%3d",
+    "ano_estreno_serie": "2017",
+    "sinopsis_serie": "En el instituto, Hori-san es una chica frívola y popular, pero en casa es pragmática, seria y responsable. Miyamura-kun parece un chico otaku y apático en el instituto, pero en realidad es un atractivo chico lleno de tatuajes y piercings. Cuando ambos jóvenes se encuentran, un extraño romance comenzará en el instituto.",
+    "id_categorias": [
+        {"id_cat1":"CAT09"},
+        {"id_cat2":"CAT10"},
+        {"id_cat3":"CAT05"},
+        {"id_cat4":"CAT02"}
+    ]
+}
+)
+
+
+
+db.Series.insert(
+{
+    "id_serie": "SE02",
+    "nombre_series": "Ranking of Kings",
+    "cantidad_capitulos": "23",
+    "miniatura_serie": "https://pics.filmaffinity.com/osama_ranking-457561732-large.jpg",
+    "restriccion_edad_serie": "ALL",
+    "trailer_serie": "https://youtu.be/Tr1ahorojPg",
+    "enlace_serie": "https://www.movieseafit.com/Ousama-Ranking/3E2tarRBVkOB1JxZE7X3Nw%3d%3d",
+    "ano_estreno_serie": "2021",
+    "sinopsis_serie": "Bojii es un príncipe bastante débil y sordo de nacimiento. Como hijo primogénito, lucha y sueña por convertirse en el mejor Rey del mundo. Aún así, la gente a su alrededor desconfía de él a sus espaldas. Bojii conoce a Kage, una sombra que fuera un miembro de un clan asesino cercenado hace años, que se convertirá en su primer y verdadero amigo."
+    "id_categorias": [
+        {"id_cat1":"CAT01"},
+        {"id_cat2":"CAT02"},
+        {"id_cat3":"CAT03"},
+        {"id_cat4":"CAT04"},
+        {"id_cat5":"CAT08"}
+    ]
+}
+)
+
+
+
+db.Series.insert(
+{
+    "id_serie": "SE03",
+    "nombre_series": "Fate Grand Order: Absolute Demonic Front: Babylonia",
+    "cantidad_capitulos": "21",
+    "miniatura_serie": "https://pics.filmaffinity.com/fate_grand_order_zettai_maju_sensen_babylonia-607421263-large.jpg",
+    "restriccion_edad_serie": "+18",
+    "trailer_serie": "https://youtu.be/BIZN34WMi5E",
+    "enlace_serie": "https://www.movieseafit.com/Fate-Grand-Order-Absolute-Demonic-Front-Babylonia/a%2fUjjacS%2bEuHK2T7iyy6xg%3d%3d",
+    "ano_estreno_serie": "2021",
+    "sinopsis_serie": "Tras el éxito en la 'Singularidad de Camelot', Ritsuka Fujimaru y Mash Kyrielight son asignados a la última singularidad de la iniciativa Grand Order: La Antigua Babilonia. Ritsuka y Mash deberán colaborar con el rey Gilgamesh para detener el ataque de unas misteriosas bestias, que han sido enviadas por los 'Tres Dioses' para destruir la ciudad de Uruk."
+    "id_categorias": [
+        {"id_cat1":"CAT01"},
+        {"id_cat2":"CAT02"},
+        {"id_cat3":"CAT03"},
+        {"id_cat4":"CAT04"},
+        {"id_cat5":"CAT08"}
+    ]
+}
+)
+
+
+
+
+db.Usuarios.insert(
+{
+    "_id":"U01",
+        
+    "correo": "pepepe@correo.com",
+    "contrasena": "frozen123",
+    "registro_login": "Ultimo ingreso: 12:03:34",
+    "tarjeta": "3723581307",
+    "numero_telefono": "+57 312 9418998",
+    "id_plan": "PLAN01",
+    "servidor": "Brazil",
+
+    "perfiles": [
+        {"id_perfil": "PF001", "nombre_perfil": "valen", "biografia": "shrek 2 es la mejor pelicula del mundo entero", "foto_perfil": "https://www.movieseafit.com/valen/valen.jpg"},
+        {"id_perfil": "PF002", "nombre_perfil": "shiki.kun", "biografia": "me gusta mucho fate y spiderman", "foto_perfil": "https://www.movieseafit.com/shikikun/shikikun.jpg"} 
+    ]
+}
+)
+
+db.Usuarios.insert(
+{
+    "_id": "U02",
+    
+    "correo": "oliviah@correo.com",
+    "contrasena": "monotree1",
+    "registro_login": "Ultimo ingreso: 08:56:14",
+    "tarjeta": "3467635010",
+    "numero_telefono": "+57 333 3601045",
+    "id_plan": "PLAN03",
+    "servidor": "US-West",
+
+    "perfiles": [
+        {"id_perfil": "PF003", "nombre_perfil": "lauraos", "biografia": "harry potter <33333", "foto_perfil": "https://www.movieseafit.com/lauraos/lauraos.jpg"},
+        {"id_perfil": "PF004", "nombre_perfil": "marta20", "biografia": "sortilegio y mujer con aroma de cafe", "foto_perfil": "https://www.movieseafit.com/marta20/marta20.jpg"} 
+    ]
+}
+)
+
+db.Usuarios.insert(
+{
+    "_id": "U03",
+    
+    "correo": "vaal@correo.com",
+    "contrasena": "lionelmessi",
+    "registro_login": "Ultimo ingreso: 10:45:24",
+    "tarjeta": "3445139747",
+    "numero_telefono": "+57 315 7463740",
+    "id_plan": "PLAN03",
+    "servidor": "US-East",
+
+    "perfiles": [
+        {"id_perfil": "PF005", "nombre_perfil": "xiovipa21", "biografia": "me gusta betty la fea <3", "foto_perfil": "https://www.movieseafit.com/xiovipa21/xiovipa21.jpg"},
+        {"id_perfil": "PF006", "nombre_perfil": "sinb", "biografia": "purr, kaboom and tamina", "foto_perfil": "https://www.movieseafit.com/sinb/sinb.jpg"} 
+    ]
+}
+)
+
+
+db.Usuarios.insert(
+{
+    "_id": "U04",
+    
+    "correo": "nana.op@correo.com",
+    "contrasena": "ilichil127",
+    "registro_login": "Ultimo ingreso: 02:00:34",
+    "tarjeta": "3725022226",
+    "numero_telefono": "+57 333 3847864",
+    "id_plan": "PLAN02",
+    "servidor": "Japon",
+
+    "perfiles": [
+        {"id_perfil": "PF007", "nombre_perfil": "gfriend", "biografia": "para cuando segunda temporada de one piece?", "foto_perfil": "https://www.movieseafit.com/gfriend/gfriend.jpg"},
+        {"id_perfil": "PF008", "nombre_perfil": "loveryan", "biografia": "the mask is the best movie", "foto_perfil": "https://www.movieseafit.com/loveryan/loveryan.jpg"} 
+    ]
+}
+)
+
+
+
+db.Usuarios.insert(
+{
+    "_id": "U05",
+    
+    "correo": "shirou28@correo.com",
+    "contrasena": "excalibur.saber28",
+    "registro_login": "Ultimo ingreso: 09:02:56",
+    "tarjeta": "3495619655",
+    "numero_telefono": "+57 302 1108981",
+    "id_plan": "PLAN01",
+    "servidor": "Australia",
+
+    "perfiles": [
+        {"id_perfil": "PF009", "nombre_perfil": "hyolyn", "biografia": "really liked loona's shake it", "foto_perfil": "https://www.movieseafit.com/hyolyn/hyolyn.jpg"},
+        {"id_perfil": "PF010", "nombre_perfil": "pepepe10", "biografia": "me gusta el anime :D", "foto_perfil": "https://www.movieseafit.com/pepepe10/pepepe10.jpg"} 
+    ]
+}
+)
+
+
+
+
+db.Planes.insert(
+{
+    "_id": "PLAN1",
+    
+    "nombre_plan": "Basico",
+    "numero_pantallas": 2,
+    "duracion_plan": "30 dias",
+    "precio_plan": "9.900$"
+}
+)
+
+db.Planes.insert(
+{
+    "_id": "PLAN2",
+    
+    "nombre_plan": "Estandar",
+    "numero_pantallas": 4,
+    "duracion_plan": "30 dias",
+    "precio_plan": "16.900$"
+}
+)
+
+db.Planes.insert(
+{
+    "_id": "PLAN3",
+    
+    "nombre_plan": "Premium",
+    "numero_pantallas": 6,
+    "duracion_plan": "30 dias",
+    "precio_plan": "24.900$"
+}
+)
+
+
+
+
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T001",
+
+    "perfil": "valen",
+    "pelicula": "PE01",
+    "tiempo": "1:27:56"
+}
+)
+
+
+
+
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T002",
+
+    "perfil": "shiki.kun",
+    "serie": "SE01",
+    "capitulo": "02",
+    "tiempo": "00:14:15"
+}
+)
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T003",
+
+    "perfil": "lauraos",
+    "pelicula": "PE03",
+    "tiempo": "00:57:07"
+}
+)
+
+
+
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T004",
+
+    "perfil": "marta20",
+    "serie": "SE02",
+    "capitulo": "01",
+    "tiempo": "00:36:59"
+}
+)
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T005",
+
+    "perfil": "xiovipa21",
+    "pelicula": "PE02",
+    "tiempo": "01:07:15"
+}
+)
+
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T006",
+
+    "perfil": "sinb",
+    "serie": "SE03",
+    "capitulo": "00",
+    "tiempo": "00:20:52"
+}
+)
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T007",
+
+    "perfil": "gfriend",
+    "pelicula": "PE01",
+    "tiempo": "01:48:02"
+}
+)
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T008",
+
+    "perfil": "loveryan",
+    "serie": "SE01",
+    "capitulo": "02",
+    "tiempo": "00:04:43"
+}
+)
+
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T009",
+
+    "perfil": "hyolyn",
+    "pelicula": "PE02",
+    "tiempo": "01:34:15"
+}
+)
+
+db.TiempoVisualizacion.insert(
+{
+    "_id": "T010",
+
+    "perfil": "pepepe10",
+    "serie": "SE03",
+    "capitulo": "03",
+    "tiempo": "00:20:00"
+}
+)
+
+
+
+
+
+
+
+db.Capitulos.insert(
+{
+    "_id": "CAP001",
+
+    "id_serie": "SE01",
+    "nombre_capitulo": "Una Pequeña Casualidad",
+    "numero_capitulo": "01",
+    "duracion_capitulo": "00:23:47",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/74a6ef6c1bbc1549800ffba752edc403.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/GQJUG991E/a-tiny-happenstance",
+    "descripcion_capitulo": "Hori vive una doble vida: es una chica popular y moderna en la escuela, y una cuidadora sencilla y decidida en casa. Después de un encuentro casual con su compañero de clase Miyamura, descubre que no es la única que esconde su verdadero yo.",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+
+db.Capitulos.insert(
+{
+    "_id": "CAP002",
+    
+    "id_serie": "SE01",
+    "nombre_capitulo": "Tienes más de una cara",
+    "numero_capitulo": "02",
+    "duracion_capitulo": "00:23:47",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/d657b5222bcd028016e06418b63534e8.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/G50UZ4494/you-wear-more-than-one-face",
+    "descripcion_capitulo": "Cuando su madre pregunta por Miyamura, Hori se da cuenta de algo aterrador. Más tarde, el Consejo Estudiantil obliga a Hori a realizar trabajo extra, pero cuando surge un conflicto, es Miyamura quien va a suavizar las cosas.",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+
+db.Capitulos.insert(
+{
+    "_id": "CAP003",
+
+    "id_serie": "SE01",
+    "nombre_capitulo": "Por eso está bien",
+    "numero_capitulo": "03",
+    "duracion_capitulo": "00:23:47",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/bbb09313fd7c1f0d174f9c8cefc3e414.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/GWDU8KKWG/thats-why-its-okay",
+    "descripcion_capitulo": "Miyamura reflexiona sobre su pasado y su presente. Hori responde a la demanda egoísta de Remi. Una acalorada conversación entre Ishikawa y Miyamura termina con una pelea a puñetazos",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+
+
+
+
+
+
+
+db.Capitulos.insert(
+{
+    "_id": "CAP014",
+    
+    "id_serie": "SE02",
+    "nombre_capitulo": "El nuevo traje del príncipe",
+    "numero_capitulo": "01",
+    "duracion_capitulo": "00:22:49",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/fe2ab30aa62da3af20a6cc57ed31d2e1.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/GN7UD78DX/the-princes-new-clothes",
+    "descripcion_capitulo": "Bojji es el primer príncipe de su reino, pero es sordo y mudo, lo que hace que nadie confíe en él y deseen que sea el segundo príncipe quien suceda al poderoso rey. Pero cuando Bojji conoce a una misteriosa sombra y decide entablar amistad con ella...",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+
+db.Capitulos.insert(
+{
+    "_id": "CAP015",
+    
+    "id_serie": "SE02",
+    "nombre_capitulo": "El Príncipe y Kage",
+    "numero_capitulo": "02",
+    "duracion_capitulo": "00:22:49",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/2063f07266e7cdb47d87151b93b70a8e.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/GN7UD78DX/the-princes-new-clothes",
+    "descripcion_capitulo": "Bojji se vuelve amigo de la misteriosa sombra, que resulta llamarse Kage. Kage comienza a utilizar a Bojji para robarle su costosa ropa de príncipe, pero con el pasar de los días, Kage comienza a sentir empatía por Bojji y decide adentrarse en el castillo...",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+
+db.Capitulos.insert(
+{
+    "_id": "CAP016",
+    
+    "id_serie": "SE02",
+    "nombre_capitulo": "El Nuevo Rey",
+    "numero_capitulo": "03",
+    "duracion_capitulo": "00:22:50",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/baa1f9e93fe7fa29def6051e40c2487f.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/GWDU8K488/the-new-king",
+    "descripcion_capitulo": "Bojji, después de recibir una paliza en el duelo contra su hermano Daida, es curado por su Hiling, su madrastra. Poco después, el rey Bosse muere y comienza la ceremonia de coronación al nuevo rey",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+
+
+
+
+
+
+db.Capitulos.insert(
+{
+    "_id": "CAP027",
+    
+    "id_serie": "SE03",
+    "nombre_capitulo": "Initium Iter",
+    "numero_capitulo": "00",
+    "duracion_capitulo": "00:27:01",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/e03ef03038d80478b1efd2d1c7fe2ed5.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/GRZJVPN36/initium-iter",
+    "descripcion_capitulo": "Romani Archaman es un nuevo médico en la organización Chaldea que conoce a Mash Kyrielight, una joven creada en un laboratorio para fusionarse con un Espíritu Heroico, lo que llaman un Demi-Sirviente. La joven apenas conoce nada del mundo y es básicamente una mente lógica, pero su relación con su nuevo doctor logrará abrirla un poco y cambiarla.",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+
+db.Capitulos.insert(
+{
+    "_id": "CAP028",
+        
+    "id_serie": "SE03",
+    "nombre_capitulo": "Babilonia, el Frente Demoníaco Absoluto",
+    "numero_capitulo": "01",
+    "duracion_capitulo": "00:23:40",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/68c988c88a327db14845174cdf00f8b2.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/GR79X5E36/absolute-demonic-front-babylonia",
+    "descripcion_capitulo": "Grand Order prepara la séptima Grand Order, la cual llevará a Mash Kyrielight y Ritsuka Fujimaru al fin de la Era de Dioses: 2600 a.C.",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+    
+db.Capitulos.insert(
+{
+    "_id": "CAP029",
+            
+    "id_serie": "SE03",
+    "nombre_capitulo": "La ciudad fortaleza Uruk",
+    "numero_capitulo": "02",
+    "duracion_capitulo": "00:23:40",
+    "miniatura_capitulo": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/774cee38faaf765454fa13833a12429d.jpeg",
+    "enlace_capitulo": "https://beta.crunchyroll.com/es/watch/GR9V1X096/fortress-city-uruk",
+    "descripcion_capitulo": "Ritsuka y Mash viaja con Enkidu a su destino cuando otro viajero perdido sale a su paso. Dice ser Merlín, y parece que Enkidu ocultó algo a nuestros protagonistas.",
+
+    "idiomas":[
+        {"descricpion": "Japones"},
+        {"descripcion": "Ingles"}
+    ],
+
+    "subtitulos":[
+        {"idioma": "Español"},
+        {"idioma": "Ingles"}
+    ]
+}
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

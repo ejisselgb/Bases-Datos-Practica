@@ -1,0 +1,148 @@
+
+----------------------------------------------------------------------------Peliculas----------------------------------------------------------------------------------
+
+
+{
+    id_pelicula: String,
+    nombre_pelicula: String,
+    duracion_pelicula: String,
+    miniatura_pelicula: String,
+    restriccion_edad_pelicula: String,
+    trailer_pelicula: String,
+    enlace_pelicula: String,
+    ano_estreno_pelicula: Int,
+    sinopsis_pelicula: String,
+    calificacion: Int,
+
+    categorias: [
+        {
+            id_cat: String
+        }
+    ],
+
+    actores: [
+        {
+            nombre_actor: String
+        }
+    ],
+
+    idiomas:[
+        {
+            descripcion: String
+        }
+    ],
+
+    subtitulos: [
+        {
+            idioma: String
+        }
+    ],
+    
+    comentarios: [
+        {
+            id_perfil: String, nombre_perfil: String, nombre_pelicula: String, comentario: String, calificacion_comentario: Int
+        }
+    ]
+}
+
+------------------------------------------------------------------------------Series----------------------------------------------------------------------------------
+
+{
+    id_serie: String,
+        
+    nombre_serie: String,
+    cantidad_capitulos: String,
+    miniatura_serie: String,
+    restriccion_edad_serie: String,
+    trailer_serie: String,
+    enlace_serie: String,
+    ano_estreno_serie: String,
+    sinopsis_serie: String,
+    calificacion: Int,
+    
+    categorias: [
+        {
+            id_categoria: String
+        }
+    ],
+    
+    actores: [
+        {
+            nombre_actor: String
+        }
+    ]
+        
+}
+
+------------------------------------------------------------------------------Capítulos----------------------------------------------------------------------------------
+
+{
+    id_capitulo: String,
+
+    id_serie: String,
+    nombre_capitulo: String,
+    numero_capitulo: String,
+    duracion_capitulo: String,
+    miniatura_capitulo: String,
+    enlace_capitulo: String,
+    descripcion_capitulo: String
+
+    idiomas: [
+        {
+            descripcion: String
+        }
+    ],
+
+    subtitulos: [
+        {
+            idioma: String
+        }
+    ]
+}
+
+------------------------------------------------------------------------------Tiempo----------------------------------------------------------------------------------
+
+
+{
+    id_tiempo : String,
+
+    perfil: String
+    pelicula: String,
+    tiempo: String
+
+}
+
+------------------------------------------------------------------------------Usuarios----------------------------------------------------------------------------------
+
+{
+    id_usuario: String,
+        
+    correo: String,
+    contrasena: String,
+    registro_login: String,
+    tarjeta: String,
+    numero_telefono: String,
+    plan: String,
+    servidor: String,
+
+    perfiles: [
+        {
+            id_perfil: String, 
+            nombre_perfil: String, 
+            biografia: String, 
+            foto_perfil: String,
+        }
+    ]
+}
+
+------------------------------------------------------------------------------Planes----------------------------------------------------------------------------------
+
+
+{
+    id_plan: String,
+    
+    nombre_plan: String,
+    numero_pantallas: String,
+    duracion_plan: String,
+    precio_plan: String
+}
